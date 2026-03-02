@@ -153,9 +153,9 @@
 }
 
 .wt-why-heading {
-    font-family: 'Bebas Neue', 'DIN Condensed', sans-serif;
+    font-family: 'DIN Condensed', sans-serif;
     font-size: clamp(46px, 6vw, 90px);
-    font-weight: 700;
+    font-weight: 900;
     line-height: 1;
     letter-spacing: 0.02em;
     color: #ffffff;
