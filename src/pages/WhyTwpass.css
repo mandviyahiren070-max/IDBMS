@@ -166,7 +166,8 @@
 .wt-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    /* Calculated from (1200 full width - (3 * 388 card width)) / 2 gaps */
+    gap: 18px;
 }
 
 /* ── Individual card ─────────────────────────────────────── */
@@ -174,10 +175,16 @@
     position: relative;
     border-radius: 29px;
     padding: 36px 32px 40px;
-    /* Dark glass background matching Figma: #FFFFFF0D */
+
+    /* Dimensions from Figma */
+    min-height: 249px;
+    box-sizing: border-box;
+
+    /* Background: #FFFFFF0D */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
+
 
     /* Orange gradient border via border-image — 
      CSS border-image doesn't support border-radius,
@@ -191,19 +198,15 @@
     cursor: default;
 }
 
-/* Gradient border using ::before overlay */
-.wt-card::before {
+/* Base Normal State Border: subtle white gradient using ::before */
+.wt-card::before,
+.wt-card::after {
     content: '';
     position: absolute;
     inset: 0;
     border-radius: 29px;
     padding: 2px;
-    background: linear-gradient(136.15deg,
-            rgba(255, 173, 126, 0.70) 8.56%,
-            rgba(255, 215, 192, 0.70) 31.42%,
-            rgba(255, 174, 127, 0.70) 69.16%,
-            rgba(255, 255, 255, 0.70) 100%);
-    /* Mask trick: show only the border area */
+    /* Mask trick for border-radius */
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -217,6 +220,26 @@
     transition: opacity 0.35s ease;
 }
 
+/* Subtle white gradient border (Normal state) */
+.wt-card::before {
+    background: linear-gradient(135.72deg,
+            rgba(255, 255, 255, 0.27) 8.53%,
+            rgba(255, 255, 255, 0) 60.59%,
+            rgba(255, 255, 255, 0.33) 93.17%);
+    opacity: 1;
+}
+
+/* Vibrant orange gradient border (Hover state) */
+.wt-card::after {
+    background: linear-gradient(136.15deg,
+            rgba(255, 173, 126, 0.90) 8.56%,
+            rgba(255, 215, 192, 0.90) 31.42%,
+            rgba(255, 174, 127, 0.90) 69.16%,
+            rgba(255, 255, 255, 0.90) 100%);
+    opacity: 0;
+}
+
+/* Hover Effects */
 .wt-card:hover {
     transform: translateY(-6px);
     box-shadow:
@@ -225,7 +248,13 @@
 }
 
 .wt-card:hover::before {
-    opacity: 1.4;
+    opacity: 0;
+    /* Hide normal border */
+}
+
+.wt-card:hover::after {
+    opacity: 1;
+    /* Show orange border smoothly */
 }
 
 /* ── Card content ────────────────────────────────────────── */
