@@ -60,7 +60,7 @@
     position: relative;
     z-index: 1;
     width: 90%;
-    max-width: 1200px;
+    max-width: 95%;
     margin: 0 auto;
 }
 
@@ -174,7 +174,7 @@
 .wt-card {
     position: relative;
     border-radius: 29px;
-    padding: 36px 32px 40px;
+    padding: 10px 20px 10px 20px;
 
     /* Dimensions from Figma */
     min-height: 249px;
