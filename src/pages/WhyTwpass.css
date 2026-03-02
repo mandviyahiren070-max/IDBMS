@@ -21,14 +21,15 @@
 
 /* Silver ring — left side, 40% opacity, rotated 78.49deg */
 .wt-deco-ring {
-    width: 700px;
-    height: 700px;
-    top: -60px;
-    left: -340px;
-    opacity: 0.35;
-    transform: rotate(78.49deg);
+    width: 1375px;
+    height: 1375px;
+    /* Adjust top position to align vertically behind the heading and cards */
+    top: 5%;
+    left: -320px;
+    /* opacity: 0.4; */
+    transform: rotate(-0deg);
     object-fit: contain;
-    animation: decoRotateSlow 40s linear infinite;
+    /* Animation removed as per Figma specs */
 }
 
 /* Cone — bottom right, 40% opacity, rotated 49.01deg */
