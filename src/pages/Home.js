@@ -16,6 +16,9 @@ function Home() {
           />
         </div>
 
+        {/* Top-Right Glow Effect */}
+        <div className="hero-glow-top-right" aria-hidden="true"></div>
+
         {/* Navbar */}
         <nav className="navbar" id="navbar" role="navigation" aria-label="Main navigation">
           {/* Logo */}

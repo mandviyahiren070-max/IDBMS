@@ -40,6 +40,26 @@
     z-index: 1;
 }
 
+/* ── Top-Right Blue Glow (Figma specs) ── */
+.hero-glow-top-right {
+    position: absolute;
+    width: 1135px;
+    height: 722px;
+    top: -288px;
+    left: 996px;
+    /* User specified left: 996px. Using right to keep it attached to top-right corner on all screens */
+    right: -300px;
+    background: #000DFF;
+    border-radius: 50%;
+    /* Figma exports glow as backdrop-filter sometimes, but for solid bg we need standard filter */
+    filter: blur(321.2px);
+    opacity: 1;
+    z-index: 2;
+    /* above background, below content */
+    pointer-events: none;
+}
+
+
 /* ── Bottom gradient: hero → black (Figma: transparent → #000000) ── */
 .hero-section::after {
     content: '';
