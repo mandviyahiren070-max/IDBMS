@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import WhyTwpass from "./WhyTwpass";
 
 function Home() {
   return (
@@ -36,8 +37,12 @@ function Home() {
           <h1 className="hero-title">TWPASS ALLIANCE</h1>
         </div>
       </section>
+
+      {/* ===== SECOND MODULE: WHY TWPASS ===== */}
+      <WhyTwpass />
     </div>
   );
 }
+
 
 export default Home;

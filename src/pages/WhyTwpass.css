@@ -1,0 +1,377 @@
+/* ============================================================
+   WHY TWPASS — Second Module Styles
+   ============================================================ */
+
+/* ── Section wrapper ──────────────────────────────────────── */
+.wt-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #05060d;
+    padding: 100px 0 120px;
+}
+
+/* ── Decorative background images ────────────────────────── */
+.wt-deco {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+/* Silver ring — left side, 40% opacity, rotated 78.49deg */
+.wt-deco-ring {
+    width: 700px;
+    height: 700px;
+    top: -60px;
+    left: -340px;
+    opacity: 0.35;
+    transform: rotate(78.49deg);
+    object-fit: contain;
+    animation: decoRotateSlow 40s linear infinite;
+}
+
+/* Cone — bottom right, 40% opacity, rotated 49.01deg */
+.wt-deco-cone {
+    width: 680px;
+    height: 680px;
+    bottom: -160px;
+    right: -200px;
+    opacity: 0.35;
+    transform: rotate(49.01deg);
+    object-fit: contain;
+    animation: decoRotateSlow 50s linear infinite reverse;
+}
+
+@keyframes decoRotateSlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ── Section inner container ─────────────────────────────── */
+.wt-intro,
+.wt-why-block {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ── What is TWPASS? intro row ───────────────────────────── */
+.wt-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 96px;
+}
+
+/* Left side – heading + body */
+.wt-intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.wt-intro-heading {
+    font-family: 'Bebas Neue', 'DIN Condensed', sans-serif;
+    font-size: clamp(42px, 5vw, 80px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin: 0;
+}
+
+.wt-intro-desc {
+    font-family: 'Mulish', sans-serif;
+    font-size: clamp(14px, 1.15vw, 17px);
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 480px;
+    margin: 0;
+}
+
+/* Right side – fingerprint image */
+.wt-intro-img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.wt-intro-img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+    /* Glow behind the image to blend with dark bg */
+    filter: drop-shadow(0 0 60px rgba(40, 100, 255, 0.35));
+    animation: floatImg 6s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+/* ── Why TWPASS ALLIANCE? block ──────────────────────────── */
+.wt-why-block {
+    margin-top: 0;
+}
+
+.wt-why-heading {
+    font-family: 'Bebas Neue', 'DIN Condensed', sans-serif;
+    font-size: clamp(46px, 6vw, 90px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin: 0 0 56px 0;
+}
+
+/* ── Feature card grid ───────────────────────────────────── */
+.wt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* ── Individual card ─────────────────────────────────────── */
+.wt-card {
+    position: relative;
+    border-radius: 29px;
+    padding: 36px 32px 40px;
+    /* Dark glass background matching Figma: #FFFFFF0D */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+
+    /* Orange gradient border via border-image — 
+     CSS border-image doesn't support border-radius,
+     so we use ::before pseudo-element trick */
+    border: 2px solid transparent;
+    background-clip: padding-box;
+
+    /* Hover / transition */
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+}
+
+/* Gradient border using ::before overlay */
+.wt-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 29px;
+    padding: 2px;
+    background: linear-gradient(136.15deg,
+            rgba(255, 173, 126, 0.70) 8.56%,
+            rgba(255, 215, 192, 0.70) 31.42%,
+            rgba(255, 174, 127, 0.70) 69.16%,
+            rgba(255, 255, 255, 0.70) 100%);
+    /* Mask trick: show only the border area */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.35s ease;
+}
+
+.wt-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(242, 100, 14, 0.12);
+}
+
+.wt-card:hover::before {
+    opacity: 1.4;
+}
+
+/* ── Card content ────────────────────────────────────────── */
+.wt-card-icon {
+    position: relative;
+    z-index: 1;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wt-card-icon img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.wt-card-title {
+    position: relative;
+    z-index: 1;
+    font-family: 'Mulish', sans-serif;
+    font-size: clamp(16px, 1.3vw, 20px);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    line-height: 1.25;
+}
+
+.wt-card-tagline {
+    position: relative;
+    z-index: 1;
+    font-family: 'Mulish', sans-serif;
+    font-size: clamp(12px, 0.9vw, 14px);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0 0 14px 0;
+    line-height: 1.4;
+}
+
+.wt-card-desc {
+    position: relative;
+    z-index: 1;
+    font-family: 'Mulish', sans-serif;
+    font-size: clamp(12px, 0.85vw, 13.5px);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Scroll-triggered fade-up animations ─────────────────── */
+.wt-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wt-fade-up.wt-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Blue ambient glow (matches Figma dark-blue background) ── */
+.wt-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: -5%;
+    width: 55vw;
+    height: 55vw;
+    max-width: 900px;
+    max-height: 900px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center,
+            rgba(30, 60, 220, 0.22) 0%,
+            rgba(10, 20, 80, 0.08) 55%,
+            transparent 75%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+    .wt-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .wt-card {
+        padding: 28px 24px 32px;
+    }
+}
+
+@media (max-width: 900px) {
+    .wt-intro {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 72px;
+    }
+
+    .wt-intro-img-wrap {
+        justify-content: center;
+    }
+
+    .wt-intro-img {
+        max-width: 360px;
+    }
+
+    .wt-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .wt-deco-ring {
+        width: 500px;
+        height: 500px;
+        left: -240px;
+        top: -40px;
+    }
+
+    .wt-deco-cone {
+        width: 480px;
+        height: 480px;
+        right: -160px;
+        bottom: -120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .wt-section {
+        padding: 70px 0 90px;
+    }
+
+    .wt-intro,
+    .wt-why-block {
+        width: 92%;
+    }
+
+    .wt-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .wt-intro-heading {
+        font-size: clamp(36px, 10vw, 56px);
+    }
+
+    .wt-why-heading {
+        font-size: clamp(36px, 10vw, 60px);
+        margin-bottom: 36px;
+    }
+
+    .wt-card {
+        border-radius: 20px;
+        padding: 24px 20px 28px;
+    }
+
+    .wt-deco-ring,
+    .wt-deco-cone {
+        display: none;
+    }
+}
