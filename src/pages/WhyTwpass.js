@@ -84,13 +84,6 @@ export default function WhyTwpass() {
         aria-hidden="true"
         loading="lazy"
       />
-      <img
-        className="wt-deco wt-deco-cone"
-        src="/assets/images/Cone_01-12.png"
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-      />
 
       {/* ── What is TWPASS? ── */}
       <div

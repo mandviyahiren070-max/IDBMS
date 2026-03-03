@@ -3,7 +3,7 @@
     width: 100%;
     /* Pull section up slightly to hide any 1px subpixel gaps between sections */
     margin-top: -2px;
-    padding: 122px 0 160px;
+    padding: 10px 160px 122px 120px;
     /* background: linear-gradient(160deg, #010206 0%, #030a2a 50%, #010416 100%); */
     background: #05060d;
     overflow: hidden;

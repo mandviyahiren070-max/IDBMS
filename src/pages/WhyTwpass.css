@@ -32,28 +32,6 @@
     /* Animation removed as per Figma specs */
 }
 
-/* Cone — bottom right, 40% opacity, rotated 49.01deg */
-.wt-deco-cone {
-    width: 680px;
-    height: 680px;
-    bottom: -160px;
-    right: -200px;
-    opacity: 0.35;
-    transform: rotate(49.01deg);
-    object-fit: contain;
-    animation: decoRotateSlow 50s linear infinite reverse;
-}
-
-@keyframes decoRotateSlow {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 /* ── Section inner container ─────────────────────────────── */
 .wt-intro,
 .wt-why-block {
@@ -380,13 +358,6 @@
         left: -240px;
         top: -40px;
     }
-
-    .wt-deco-cone {
-        width: 480px;
-        height: 480px;
-        right: -160px;
-        bottom: -120px;
-    }
 }
 
 @media (max-width: 600px) {
@@ -418,8 +389,7 @@
         padding: 24px 20px 28px;
     }
 
-    .wt-deco-ring,
-    .wt-deco-cone {
+    .wt-deco-ring {
         display: none;
     }
 }
