@@ -1,17 +1,13 @@
 .get-in-touch-section {
     position: relative;
     width: 100%;
-    /* Add a subtle semi-transparent background to set it apart from previous dark sections */
-    background: rgb(0, 0, 0);
-    /* Top and bottom subtle separators */
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    padding: 120px 0 160px;
+    /* Let the background be perfectly transparent so the main page dark color flows through */
+    background: transparent;
+    padding: 0px 0 10px 0;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
 }
 
 /* Background elements */
