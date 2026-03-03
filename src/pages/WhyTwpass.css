@@ -6,6 +6,8 @@
 .wt-section {
     position: relative;
     width: 100%;
+    margin-top: -120px;
+    /* Pulls section into the hero fade to erase boundaries */
     padding: 100px 0 120px;
 }
 
@@ -109,10 +111,10 @@
     object-fit: contain;
     /* Extra subtle drop shadow for depth */
     filter: drop-shadow(0 0 30px rgba(0, 13, 255, 0.25));
-    animation: floatImg 6s ease-in-out infinite;
+    /* animation: floatImg 6s ease-in-out infinite; */
 }
 
-@keyframes floatImg {
+/* @keyframes floatImg {
 
     0%,
     100% {
@@ -122,7 +124,7 @@
     50% {
         transform: translateY(-14px);
     }
-}
+} */
 
 /* ── Why TWPASS ALLIANCE? block ──────────────────────────── */
 .wt-why-block {
@@ -343,7 +345,9 @@
     }
 
     .wt-intro-img {
-        max-width: 360px;
+        /* max-width: 360px; */
+        height: 1008px;
+        position: absolute;
     }
 
     .wt-grid {
