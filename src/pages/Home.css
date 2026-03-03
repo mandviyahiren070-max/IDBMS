@@ -22,8 +22,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* Pull hero section up so 1st scrolling item visually encompasses the navbar */
-    margin-top: -100px;
 }
 
 /* Background Image */
@@ -55,36 +53,32 @@
 /* ── Top-Right Blue Glow (Figma specs) ── */
 .hero-glow-top-right {
     position: absolute;
-    width: 1135px;
-    height: 722px;
-    top: -288px;
-    left: 996px;
-    /* User specified left: 996px. Using right to keep it attached to top-right corner on all screens */
-    right: -300px;
+    width: 1000px;
+    height: 1000px;
+    top: -400px;
+    right: -400px;
     background: #000DFF;
     border-radius: 50%;
-    /* Figma exports glow as backdrop-filter sometimes, but for solid bg we need standard filter */
-    filter: blur(321.2px);
-    opacity: 1;
-    z-index: 2;
-    /* above background, below content */
+    filter: blur(250px);
+    opacity: 0.85;
+    z-index: 10;
     pointer-events: none;
 }
 
 
-/* ── Bottom gradient: hero → black (Figma: transparent → #000000) ── */
+/* ── Bottom gradient: hero → black (Figma: transparent → #05060d) ── */
 .hero-section::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    /* Cover bottom 60% for a long, cinematic fade to black */
+    /* Cover bottom 60% for a long, cinematic fade to match page background */
     height: 60%;
     background: linear-gradient(180deg,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.65) 60%,
-            #000000 100%);
+            rgba(5, 6, 13, 0) 0%,
+            rgba(5, 6, 13, 0.65) 60%,
+            #05060d 100%);
     z-index: 5;
     /* above the bg image, below the navbar & title */
     pointer-events: none;
@@ -100,7 +94,8 @@
     justify-content: space-between;
     width: 90%;
     max-width: 1100px;
-    margin: 28px auto 0 auto;
+    margin: 28px auto -100px auto;
+    /* Pulls next section up underneath it without breaking layout */
     padding: 12px 28px;
     border-radius: 9999px;
     /* Glassmorphism */

@@ -83,6 +83,7 @@
     align-items: center;
     justify-content: flex-end;
     position: relative;
+    height: 100%;
 }
 
 /* Add a large blue glow behind the verify image */

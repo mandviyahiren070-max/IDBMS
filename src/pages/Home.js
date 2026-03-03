@@ -8,6 +8,9 @@ import Footer from "./Footer";
 function Home() {
   return (
     <div className="home-page">
+      {/* Top-Right Blue Glow (Placed here so it covers the corner perfectly) */}
+      <div className="hero-glow-top-right" aria-hidden="true"></div>
+
       {/* Navbar (At root so it sticks across whole page) */}
       <nav className="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         {/* Logo */}
