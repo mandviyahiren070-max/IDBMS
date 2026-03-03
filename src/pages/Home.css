@@ -181,7 +181,7 @@
     font-family: 'Bebas Neue', 'DIN Condensed', sans-serif;
     font-weight: 700;
     font-size: clamp(60px, 9vw, 130px);
-    line-height: 92%;
+    line-height: 200%;
     letter-spacing: 0.04em;
     text-align: center;
     color: #ffffff;
