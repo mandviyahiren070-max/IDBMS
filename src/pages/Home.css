@@ -2,6 +2,13 @@
    HOME PAGE STYLES
    ======================================== */
 
+.home-page {
+    background: #05060d;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 /* --- Hero Section --- */
 .hero-section {
     position: relative;
