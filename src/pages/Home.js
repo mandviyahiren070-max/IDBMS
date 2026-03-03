@@ -3,6 +3,7 @@ import "./Home.css";
 import WhyTwpass from "./WhyTwpass";
 import JoinUs from "./JoinUs";
 import GetInTouch from "./GetInTouch";
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -51,6 +52,9 @@ function Home() {
 
       {/* ===== FOURTH MODULE: GET IN TOUCH ===== */}
       <GetInTouch />
+
+      {/* ===== FOOTER ===== */}
+      <Footer />
     </div>
   );
 }
