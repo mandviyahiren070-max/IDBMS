@@ -87,7 +87,7 @@ const GetInTouch = () => {
             <div className="git-bg-gradient"></div>
             <img
               className="git-bg-ring"
-              src="/assets/images/Rring.webp"
+              src="/assets/images/Ring Corn.png"
               alt=""
               aria-hidden="true"
               loading="lazy"

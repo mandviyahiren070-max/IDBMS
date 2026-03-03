@@ -3,6 +3,8 @@
     width: 100%;
     padding: 10px 160px 122px 120px;
     z-index: 1;
+    /* Soft shading at the bottom before transition to Get in Touch */
+    box-shadow: inset 0 -40px 100px -20px rgba(0, 0, 0, 0.4);
 }
 
 /* Add a deep blue background glow */
