@@ -33,14 +33,14 @@
 
 .joinus-cone {
     position: absolute;
-    right: -250px;
-    top: 50%;
+    right: 0px;
+    top: 27%;
     transform: translateY(-50%);
     width: 1000px;
     height: auto;
     object-fit: contain;
     /* Soften it slightly into background */
-    opacity: 0.95;
+    opacity: 1;
 }
 
 /* ── Main Container ──────────────────────────────────────── */
