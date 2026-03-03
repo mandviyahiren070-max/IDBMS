@@ -5,8 +5,9 @@
 /* ── Section Wrapper ──────────────────────────────────────── */
 .footer-section {
     position: relative;
+    margin-top: 74px;
     width: 100%;
-    background: #0d0d0f;
+    background: #35353580;
     overflow: hidden;
     padding-top: 80px;
 }
@@ -208,26 +209,17 @@
 }
 
 /* ── Large TAISYS Watermark ───────────────────────────────── */
+
 .footer-watermark {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    text-align: center;
-    font-family: 'DIN Condensed', 'Bebas Neue', sans-serif;
-    font-size: clamp(100px, 18vw, 240px);
-    font-weight: 900;
-    letter-spacing: 0.04em;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.06);
-    user-select: none;
-    pointer-events: none;
-    line-height: 0.88;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    /* Gradient mask to soften top edge */
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.9) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.9) 100%);
+    opacity: 1;
+    font-family: 'DIN Condensed';
+    font-weight: 700;
+    font-size: 600px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    text-transform: uppercase;
+    color: #FFFFFF33;
+    padding-left: 35px;
 }
 
 /* ── Responsive ───────────────────────────────────────────── */
