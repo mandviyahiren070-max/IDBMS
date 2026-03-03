@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import WhyTwpass from "./WhyTwpass";
 import JoinUs from "./JoinUs";
+import GetInTouch from "./GetInTouch";
 
 function Home() {
   return (
@@ -47,6 +48,9 @@ function Home() {
 
       {/* ===== THIRD MODULE: JOIN US ===== */}
       <JoinUs />
+
+      {/* ===== FOURTH MODULE: GET IN TOUCH ===== */}
+      <GetInTouch />
     </div>
   );
 }

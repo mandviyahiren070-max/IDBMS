@@ -1,0 +1,203 @@
+.get-in-touch-section {
+    position: relative;
+    width: 100%;
+    /* Remove background, let it inherit from parent */
+    padding: 80px 0 160px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.git-title {
+    font-family: 'DIN Condensed', sans-serif;
+    font-size: clamp(40px, 6vw, 84px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0%;
+    color: #ffffff;
+    margin: 0 0 60px 0;
+    text-align: center;
+}
+
+.git-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+    width: 90%;
+    max-width: 1160px;
+    /* Adjust width slightly based on specs 1141px */
+}
+
+/* ── Image Box ─────────────────────────────────────────── */
+.git-image-box {
+    width: 430px;
+    /* User specified */
+    /* Form has a fixed dimension style roughly matching this, we'll let flex do its job if needed, but we can set flex basis */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    /* Fallback full radius container */
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    /* A subtle dark transparency instead of flat black */
+    background: rgba(4, 7, 30, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.git-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* The image inside needs border radius as well */
+    border-radius: 20px;
+    /* User asked for bottom radii, but standard looks better with both to match container, we'll do 20px all around for the inner image */
+}
+
+/* ── Form Box ─────────────────────────────────────────── */
+.git-form-box {
+    width: 691px;
+    /* User specified */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* subtle gradient or glassmorphism */
+    background: rgba(4, 7, 30, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: inset 0px 0px 40px rgba(0, 10, 100, 0.2);
+}
+
+.git-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    flex: 1;
+}
+
+.git-form-row {
+    display: flex;
+    gap: 24px;
+}
+
+.git-form-row .git-input-group {
+    flex: 1;
+}
+
+/* Inputs */
+.git-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.git-input-group label {
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.git-input-group input {
+    height: 44px;
+    border-radius: 22px;
+    /* Fully rounded pill style per screenshot */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+    font-family: 'Mulish', sans-serif;
+    font-size: 15px;
+    padding: 0 20px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.git-input-group input:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.git-input-group input.error-input {
+    border-color: #ff4a4a;
+}
+
+.git-error {
+    color: #ff4a4a;
+    font-size: 11px;
+    font-family: 'Mulish', sans-serif;
+    position: absolute;
+    bottom: -18px;
+    left: 10px;
+}
+
+/* Submit Button */
+.git-submit-btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #FF6F00 0%, #D84300 100%);
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: auto;
+    /* Pushes it to bottom if there's extra space */
+    transition: transform 0.2s ease, filter 0.2s ease;
+    box-shadow: 0px 8px 16px rgba(242, 100, 14, 0.25);
+}
+
+.git-submit-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.git-submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .git-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .git-image-box,
+    .git-form-box {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .git-image-box {
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .git-title {
+        font-size: clamp(36px, 10vw, 56px);
+        margin-bottom: 40px;
+    }
+
+    .git-form-row {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .git-form-box {
+        padding: 24px;
+    }
+}
