@@ -166,3 +166,40 @@
     margin: 0;
     line-height: 1.2;
 }
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 1240px) {
+    .joinus-section {
+        padding: 60px 40px;
+    }
+
+    .joinus-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .joinus-section {
+        padding: 50px 20px;
+    }
+
+    .joinus-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .joinus-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .joinus-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}

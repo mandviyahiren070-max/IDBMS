@@ -211,6 +211,7 @@
     .git-container {
         flex-direction: column;
         align-items: center;
+        gap: 40px;
     }
 
     .git-image-box,
