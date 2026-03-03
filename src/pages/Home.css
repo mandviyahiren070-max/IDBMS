@@ -4,7 +4,8 @@
 
 .home-page {
     background: #05060d;
-    overflow-x: hidden;
+    overflow-x: clip;
+    /* clip instead of hidden allows sticky elements to work */
     width: 100%;
     position: relative;
 }
@@ -15,10 +16,14 @@
     width: 100%;
     height: 100vh;
     min-height: 600px;
-    overflow: hidden;
+    overflow: clip;
+    /* clip instead of hidden prevents sticky from failing */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    /* Pull hero section up so 1st scrolling item visually encompasses the navbar */
+    margin-top: -100px;
 }
 
 /* Background Image */
@@ -87,14 +92,15 @@
 
 /* --- Navbar --- */
 .navbar {
-    position: relative;
+    position: sticky;
+    top: 28px;
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 90%;
     max-width: 1100px;
-    margin-top: 28px;
+    margin: 28px auto 0 auto;
     padding: 12px 28px;
     border-radius: 9999px;
     /* Glassmorphism */

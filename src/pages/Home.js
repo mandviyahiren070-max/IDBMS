@@ -8,6 +8,22 @@ import Footer from "./Footer";
 function Home() {
   return (
     <div className="home-page">
+      {/* Navbar (At root so it sticks across whole page) */}
+      <nav className="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        {/* Logo */}
+        <a href="/" className="navbar-logo" aria-label="TAISYS Home">
+          <img
+            src="/assets/images/TAISYS-logo.png"
+            alt="TAISYS Logo"
+          />
+        </a>
+
+        {/* Book a Demo CTA */}
+        <a href="#book-demo" className="btn-book-demo" id="btn-book-demo">
+          Book a demo
+        </a>
+      </nav>
+
       {/* ===== HERO SECTION ===== */}
       <section className="hero-section" id="hero">
         {/* Background Image */}
@@ -18,25 +34,6 @@ function Home() {
             loading="eager"
           />
         </div>
-
-        {/* Top-Right Glow Effect */}
-        <div className="hero-glow-top-right" aria-hidden="true"></div>
-
-        {/* Navbar */}
-        <nav className="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-          {/* Logo */}
-          <a href="/" className="navbar-logo" aria-label="TAISYS Home">
-            <img
-              src="/assets/images/TAISYS-logo.png"
-              alt="TAISYS Logo"
-            />
-          </a>
-
-          {/* Book a Demo CTA */}
-          <a href="#book-demo" className="btn-book-demo" id="btn-book-demo">
-            Book a demo
-          </a>
-        </nav>
 
         {/* Hero Content */}
         <div className="hero-content">
