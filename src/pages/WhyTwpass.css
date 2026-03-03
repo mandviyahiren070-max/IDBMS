@@ -105,12 +105,10 @@
 
 .wt-intro-img {
     width: 100%;
-    max-width: 520px;
+    max-width: 720px;
     height: auto;
     object-fit: contain;
-    /* Extra subtle drop shadow for depth */
     filter: drop-shadow(0 0 30px rgba(0, 13, 255, 0.25));
-    /* animation: floatImg 6s ease-in-out infinite; */
 }
 
 /* @keyframes floatImg {
@@ -344,7 +342,8 @@
     }
 
     .wt-intro-img {
-        max-width: 360px;
+        width: 100%;
+        max-width: 420px;
         height: auto;
         position: relative;
     }

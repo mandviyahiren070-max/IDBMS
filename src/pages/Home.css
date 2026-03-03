@@ -1,6 +1,6 @@
 /* ========================================
    HOME PAGE STYLES
-   ======================================== */
+======================================== */
 
 .home-page {
     background: #05060d;
@@ -17,11 +17,8 @@
     height: 100vh;
     min-height: 600px;
     overflow: clip;
-    /* clip instead of hidden prevents sticky from failing */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Background Image */
@@ -34,8 +31,8 @@
 .hero-bg img {
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
-    /* object-position: center; */
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Top-edge dark overlay — keeps navbar text readable */
@@ -50,20 +47,7 @@
     z-index: 1;
 }
 
-/* ── Top-Right Blue Glow (Figma specs) ── */
-.hero-glow-top-right {
-    position: absolute;
-    width: 900px;
-    height: 900px;
-    top: -650px;
-    right: -450px;
-    background: #000dff;
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.85;
-    z-index: 10;
-    pointer-events: none;
-}
+/* ── Top-Right Blue Glow (Tailwind integrated in Home.js) ── */
 
 
 /* ── Bottom gradient: hero → black (Figma: transparent → #05060d) ── */
@@ -169,21 +153,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* Align to top instead of center */
     text-align: center;
-    padding: 0 20px;
-    margin-top: 120px;
-    /* Offset from the top to position above the lock */
 }
 
-/* TWPASS ALLIANCE Title */
 .hero-title {
     font-family: 'Bebas Neue', 'DIN Condensed', sans-serif;
-    font-weight: 700;
-    font-size: clamp(60px, 9vw, 130px);
-    line-height: 200%;
-    letter-spacing: 0.04em;
-    text-align: center;
     color: #ffffff;
     text-shadow:
         3px 6px 5.5px #F2640E,
@@ -260,10 +234,6 @@
         width: 92%;
         padding: 10px 22px;
     }
-
-    .hero-title {
-        font-size: clamp(50px, 8vw, 100px);
-    }
 }
 
 @media (max-width: 768px) {
@@ -286,11 +256,6 @@
         margin-top: 80px;
         /* Adjusted from center layout */
     }
-
-    .hero-title {
-        font-size: clamp(36px, 10vw, 70px);
-        letter-spacing: 0.02em;
-    }
 }
 
 @media (max-width: 480px) {
@@ -307,9 +272,5 @@
     .btn-book-demo {
         padding: 7px 16px;
         font-size: 13px;
-    }
-
-    .hero-title {
-        font-size: clamp(30px, 12vw, 55px);
     }
 }
