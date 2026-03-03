@@ -83,6 +83,16 @@ const GetInTouch = () => {
 
     return (
         <section className="get-in-touch-section" id="get-in-touch">
+            {/* Background Elements */}
+            <div className="git-bg-gradient"></div>
+            <img
+              className="git-bg-ring"
+              src="/assets/images/Rring.webp"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+            
             <h2 className="git-title">Get in Touch with us</h2>
             
             <div className="git-container">
