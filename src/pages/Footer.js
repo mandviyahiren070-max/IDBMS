@@ -122,8 +122,11 @@ const Footer = () => {
             </div>
 
             {/* Large TAISYS Watermark */}
-            <div className="footer-watermark" aria-hidden="true">
-                TAISYS
+            <div className="footer-watermark" >
+                <div className='footer-watermark-text'>
+                    TAISYS
+                </div>
+                
             </div>
         </footer>
     );
