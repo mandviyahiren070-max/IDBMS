@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import WhyTwpass from "./WhyTwpass";
+import JoinUs from "./JoinUs";
 
 function Home() {
   return (
@@ -43,6 +44,9 @@ function Home() {
 
       {/* ===== SECOND MODULE: WHY TWPASS ===== */}
       <WhyTwpass />
+
+      {/* ===== THIRD MODULE: JOIN US ===== */}
+      <JoinUs />
     </div>
   );
 }

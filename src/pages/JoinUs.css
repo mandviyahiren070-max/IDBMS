@@ -1,0 +1,172 @@
+.joinus-section {
+    position: relative;
+    width: 100%;
+    /* Allow min-height or flow content */
+    padding: 120px 0 160px;
+    /* background: linear-gradient(160deg, #010206 0%, #030a2a 50%, #010416 100%); */
+    background: #05060d;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Add a deep blue background glow */
+.joinus-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -10%;
+    width: 70%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, rgba(12, 38, 140, 0.4) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── Background Elements ─────────────────────────────────── */
+.joinus-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.joinus-cone {
+    position: absolute;
+    right: -250px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1000px;
+    height: auto;
+    object-fit: contain;
+    /* Soften it slightly into background */
+    opacity: 0.95;
+}
+
+/* ── Main Container ──────────────────────────────────────── */
+.joinus-container {
+    position: relative;
+    z-index: 1;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ── Header Area ─────────────────────────────────────────── */
+.joinus-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.joinus-title {
+    font-family: 'DIN Condensed', sans-serif;
+    font-size: clamp(60px, 8vw, 120px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0%;
+    color: #ffffff;
+    margin: 0;
+}
+
+.joinus-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 137px;
+    height: 38px;
+    border-radius: 20px;
+    padding: 8px 16px;
+    gap: 10px;
+    background: #F2640E;
+    box-shadow: inset 0px 4px 4px 0px rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.joinus-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* ── Cards Grid ──────────────────────────────────────────── */
+.joinus-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ── Individual Card ─────────────────────────────────────── */
+.joinus-card {
+    position: relative;
+    width: 276.43px;
+    height: 348.61px;
+    border-radius: 24px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.joinus-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6), 0px 0px 20px rgba(242, 100, 14, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Image + Overlays Wrapper */
+.joinus-card-img-wrap {
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.joinus-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.joinus-card:hover .joinus-card-img {
+    transform: scale(1.06);
+    /* Gentle zoom on hover */
+}
+
+/* Shadow details overlay (top orange glow + bottom dark gradient) */
+.joinus-card-overlay {
+    position: absolute;
+    inset: 0;
+    /* Soften the orange glow and extend dark gradient */
+    background:
+        radial-gradient(ellipse at 50% -10%, rgba(242, 100, 14, 0.55) 0%, transparent 65%),
+        linear-gradient(180deg, transparent 35%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    pointer-events: none;
+    /* Allows hover zoom to trigger seamlessly */
+}
+
+.joinus-card-title {
+    color: #ffffff;
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
