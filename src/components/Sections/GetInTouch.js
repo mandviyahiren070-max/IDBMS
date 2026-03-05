@@ -96,7 +96,7 @@ const GetInTouch = () => {
     return (
         <section className="relative w-full bg-transparent p-[0_0_10px_0] z-[1] flex flex-col items-center" id="get-in-touch">
             {/* Background Elements */}
-            <div className="absolute w-[1108px] h-[637px] top-1/2 left-[163px] -translate-y-1/2 bg-brand-blue blur-[250px] backdrop-blur-[650.5px] opacity-80 z-[-1] pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[1108px] h-[637px] max-[1024px]:w-[90%] max-[1024px]:h-[400px] max-[600px]:w-[100%] max-[600px]:h-[300px] rounded-full bg-brand-blue blur-[250px] max-[1024px]:blur-[120px] max-[600px]:blur-[90px] opacity-60 z-[-1] pointer-events-none"></div>
             <img
               className="absolute pointer-events-none user-select-none z-0 w-[1375px] h-[1375px] -top-1/3 -left-[333px] object-contain
                          max-[900px]:w-[500px] max-[900px]:h-[500px] max-[900px]:left-[-240px] max-[900px]:top-[-40px]
