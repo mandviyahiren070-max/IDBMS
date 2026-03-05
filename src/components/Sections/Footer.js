@@ -112,7 +112,7 @@ const Footer = () => {
                     </div>
 
                     {/* Social Icons */}
-                    <div className="flex flex-row gap-4 items-center flex-wrap mt-1 justify-between mr-12">
+                    <div className="flex flex-row gap-6 items-center flex-wrap mt-1 justify-start">
                         {[
                             { href: "#youtube", icon: youtubeIcon, label: "YouTube" },
                             { href: "#facebook", icon: facebookIcon, label: "Facebook" },

@@ -135,7 +135,7 @@ const GetInTouch = () => {
                                     onChange={handleChange}
                                     className={`h-[46px] rounded-[23px] border border-white/10 bg-black/20 text-white font-mulish text-[15px] px-5 outline-none transition-all duration-200 focus:border-white/30 focus:bg-black/40 ${errors.firstName ? 'border-[#ff4a4a]' : ''}`}
                                 />
-                                {errors.firstName && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-4.5 left-[10px]">{errors.firstName}</span>}
+                                {errors.firstName && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-[18px] left-[15px]">{errors.firstName}</span>}
                             </div>
                             <div className="flex-1 flex flex-col gap-2 relative">
                                 <label className="font-mulish text-[13.5px] font-medium text-white/90">Last Name</label>
@@ -146,7 +146,7 @@ const GetInTouch = () => {
                                     onChange={handleChange}
                                     className={`h-[46px] rounded-[23px] border border-white/10 bg-black/20 text-white font-mulish text-[15px] px-5 outline-none transition-all duration-200 focus:border-white/30 focus:bg-black/40 ${errors.lastName ? 'border-[#ff4a4a]' : ''}`}
                                 />
-                                {errors.lastName && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-4.5 left-[10px]">{errors.lastName}</span>}
+                                {errors.lastName && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-[18px] left-[15px]">{errors.lastName}</span>}
                             </div>
                         </div>
 
@@ -159,7 +159,7 @@ const GetInTouch = () => {
                                 onChange={handleChange}
                                 className={`h-[46px] rounded-[23px] border border-white/10 bg-black/20 text-white font-mulish text-[15px] px-5 outline-none transition-all duration-200 focus:border-white/30 focus:bg-black/40 ${errors.jobTitle ? 'border-[#ff4a4a]' : ''}`}
                             />
-                            {errors.jobTitle && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-4.5 left-[10px]">{errors.jobTitle}</span>}
+                            {errors.jobTitle && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-[18px] left-[15px]">{errors.jobTitle}</span>}
                         </div>
 
                         <div className="flex flex-col gap-2 relative">
@@ -171,7 +171,7 @@ const GetInTouch = () => {
                                 onChange={handleChange}
                                 className={`h-[46px] rounded-[23px] border border-white/10 bg-black/20 text-white font-mulish text-[15px] px-5 outline-none transition-all duration-200 focus:border-white/30 focus:bg-black/40 ${errors.companyName ? 'border-[#ff4a4a]' : ''}`}
                             />
-                            {errors.companyName && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-4.5 left-[10px]">{errors.companyName}</span>}
+                            {errors.companyName && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-[18px] left-[15px]">{errors.companyName}</span>}
                         </div>
 
                         <div className="flex flex-col gap-2 relative">
@@ -183,7 +183,7 @@ const GetInTouch = () => {
                                 onChange={handleChange}
                                 className={`h-[46px] rounded-[23px] border border-white/10 bg-black/20 text-white font-mulish text-[15px] px-5 outline-none transition-all duration-200 focus:border-white/30 focus:bg-black/40 ${errors.companyEmail ? 'border-[#ff4a4a]' : ''}`}
                             />
-                            {errors.companyEmail && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-4.5 left-[10px]">{errors.companyEmail}</span>}
+                            {errors.companyEmail && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-[18px] left-[15px]">{errors.companyEmail}</span>}
                         </div>
 
                         <div className="flex flex-col gap-2 relative">
@@ -195,7 +195,7 @@ const GetInTouch = () => {
                                 onChange={handleChange}
                                 className={`h-[46px] rounded-[23px] border border-white/10 bg-black/20 text-white font-mulish text-[15px] px-5 outline-none transition-all duration-200 focus:border-white/30 focus:bg-black/40 ${errors.message ? 'border-[#ff4a4a]' : ''}`}
                             />
-                            {errors.message && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-4.5 left-[10px]">{errors.message}</span>}
+                            {errors.message && <span className="text-[#ff4a4a] text-[11px] font-mulish absolute -bottom-[18px] left-[15px]">{errors.message}</span>}
                         </div>
 
                         <button type="submit" className="w-full h-[52px] rounded-[26px] mt-2 bg-gradient-to-r from-[#FF6F00] to-[#FF4500] border-none text-white font-mulish text-[22px] font-bold cursor-pointer transition-all duration-200 shadow-[0px_6px_20px_rgba(242,100,14,0.3)] hover:-translate-y-[2px] hover:brightness-110 active:translate-y-[1px]">Submit</button>
