@@ -28,39 +28,48 @@ const GetInTouch = () => {
     const validateForm = () => {
         const newErrors = {};
 
-        // First Name: mandatory, no spaces
-        if (!formData.firstName.trim()) {
+        // 1. Explicitly trim front and back spaces for every field
+        const firstName = formData.firstName.trim();
+        const lastName = formData.lastName.trim();
+        const jobTitle = formData.jobTitle.trim();
+        const companyName = formData.companyName.trim();
+        const companyEmail = formData.companyEmail.trim();
+        const message = formData.message.trim();
+
+        // First Name: mandatory, no inner spaces allowed
+        if (!firstName) {
             newErrors.firstName = 'First Name is required.';
-        } else if (/\s/.test(formData.firstName)) {
+        } else if (/\s/.test(firstName)) {
             newErrors.firstName = 'First Name cannot contain spaces.';
         }
 
-        // Last Name: mandatory, no spaces
-        if (!formData.lastName.trim()) {
+        // Last Name: mandatory, no inner spaces allowed
+        if (!lastName) {
             newErrors.lastName = 'Last Name is required.';
-        } else if (/\s/.test(formData.lastName)) {
+        } else if (/\s/.test(lastName)) {
             newErrors.lastName = 'Last Name cannot contain spaces.';
         }
 
         // Job Title: mandatory
-        if (!formData.jobTitle.trim()) {
+        if (!jobTitle) {
             newErrors.jobTitle = 'Job Title is required.';
         }
 
         // Company Name: mandatory
-        if (!formData.companyName.trim()) {
+        if (!companyName) {
             newErrors.companyName = 'Company Name is required.';
         }
 
-        // Company Email: mandatory, valid email
-        if (!formData.companyEmail.trim()) {
+        // Company Email: mandatory, robust Regex validation
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!companyEmail) {
             newErrors.companyEmail = 'Email is required.';
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.companyEmail)) {
+        } else if (!emailRegex.test(companyEmail)) {
             newErrors.companyEmail = 'Please enter a valid email address.';
         }
 
         // Message: mandatory
-        if (!formData.message.trim()) {
+        if (!message) {
             newErrors.message = 'Message is required.';
         }
 
