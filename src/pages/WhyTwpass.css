@@ -95,20 +95,22 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 140%;
-    height: 140%;
-    background: radial-gradient(circle at center, rgba(0, 13, 255, 0.45) 0%, transparent 70%);
-    filter: blur(40px);
+    width: 180%;
+    height: 180%;
+    background: radial-gradient(circle at center, rgba(0, 80, 255, 0.55) 0%, rgba(0, 30, 200, 0.25) 30%, transparent 70%);
+    filter: blur(50px);
     z-index: -1;
     pointer-events: none;
 }
 
 .wt-intro-img {
-    width: 100%;
-    max-width: 720px;
+    width: 110%;
+    /* Break out of column constraints for a bigger look */
+    max-width: none;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 0 30px rgba(0, 13, 255, 0.25));
+    filter: drop-shadow(0 15px 40px rgba(0, 80, 255, 0.4));
+    transform: translateX(5%);
 }
 
 /* @keyframes floatImg {
@@ -343,9 +345,12 @@
 
     .wt-intro-img {
         width: 100%;
-        max-width: 420px;
+        max-width: 550px;
+        /* Increased mobile max-width */
         height: auto;
         position: relative;
+        transform: translateX(0);
+        /* Reset Desktop offset */
     }
 
     .wt-grid {
