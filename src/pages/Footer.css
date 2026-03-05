@@ -294,6 +294,18 @@
     }
 
     .footer-watermark {
-        font-size: clamp(60px, 20vw, 130px);
+        height: auto;
+        padding: 40px 0 20px;
+        overflow: hidden;
+    }
+
+    .footer-watermark-text {
+        font-size: 26vw;
+        /* Scales with screen width perfectly */
+        margin-left: 0;
+        line-height: 1;
+        text-align: center;
+        width: 100%;
+        white-space: nowrap;
     }
 }
