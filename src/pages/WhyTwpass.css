@@ -333,10 +333,18 @@
 }
 
 @media (max-width: 900px) {
+    .wt-section {
+        margin-top: 0;
+        /* Prevent overlap issues on tablet/mobile */
+        padding-top: 40px;
+    }
+
     .wt-intro {
         grid-template-columns: 1fr;
         gap: 40px;
         margin-bottom: 72px;
+        padding-top: 3rem;
+        /* Increased padding-top for better spacing */
     }
 
     .wt-intro-img-wrap {
@@ -374,6 +382,11 @@
     .wt-intro,
     .wt-why-block {
         width: 92%;
+    }
+
+    .wt-intro {
+        padding-top: 4rem;
+        /* Increased top padding for mobile visibility */
     }
 
     .wt-grid {
