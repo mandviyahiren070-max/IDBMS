@@ -1,5 +1,4 @@
 import React from 'react';
-import './Footer.css';
 
 // Import Assets
 import footerCone from "../../assets/images/Cone_01-12.png";
@@ -13,132 +12,144 @@ import linkedinIcon from "../../assets/icons/linkedin.svg";
 
 const Footer = () => {
     return (
-        <footer className="footer-section" id="footer">
+        <footer className="relative mt-[74px] w-full bg-[#0f0f13] isolate overflow-hidden pt-20" id="footer">
             {/* Right Bottom Cone Background */}
             <img
                 src={footerCone}
                 alt=""
-                className="footer-cone"
+                className="absolute bottom-0 right-0 w-[800px] h-auto object-contain pointer-events-none select-none z-0 opacity-70 max-[700px]:w-[320px] max-[700px]:opacity-50"
                 aria-hidden="true"
                 loading="lazy"
             />
 
             {/* Main Footer Content */}
-            <div className="footer-top">
+            <div className="relative z-[1] grid grid-cols-[260px_1fr_1fr_280px] max-[1100px]:grid-cols-2 max-[700px]:grid-cols-1 gap-12 max-[1100px]:gap-10 max-[700px]:gap-9 w-[90%] max-[700px]:w-[92%] max-w-[1200px] mx-auto mt-[68px]">
 
                 {/* Column 1: Logo + Tagline */}
-                <div className="footer-col footer-brand">
-                    <a href="/" className="footer-logo-link" aria-label="TAISYS Home">
+                <div className="flex flex-col gap-5 max-[1100px]:col-span-full">
+                    <a href="/" className="inline-block" aria-label="TAISYS Home">
                         <img
                             src={taisysLogo}
                             alt="TAISYS Logo"
-                            className="footer-logo"
+                            className="h-9 w-auto object-contain"
                         />
                     </a>
-                    <p className="footer-tagline">
+                    <p className="font-mulish text-[14px] font-normal leading-[1.6] tracking-normal text-white/80 m-0 max-w-[357px]">
                         Taisys leads with purpose and scale, redefining how identity, security and connectivity come together in a digital-first world
                     </p>
                 </div>
 
                 {/* Column 2: Resources */}
-                <div className="footer-col">
-                    <h4 className="footer-col-heading">Resources</h4>
-                    <h5 className="footer-link-group-title">About</h5>
-                    <ul className="footer-links">
-                        <li><a href="#inside-omnicard">Inside OmniCard</a></li>
-                        <li><a href="#our-license">Our License</a></li>
-                        <li><a href="#media-awards">Media &amp; Awards</a></li>
-                        <li><a href="#career">Career</a></li>
+                <div className="flex flex-col">
+                    <h4 className="font-bebas text-[22px] font-bold tracking-[0.06em] uppercase text-white m-[0_0_20px_0]">Resources</h4>
+                    <h5 className="font-mulish text-[15px] font-bold text-white m-[0_0_12px_0] tracking-normal tracking-wide">About</h5>
+                    <ul className="list-none m-0 p-0 flex flex-col gap-2">
+                        <li><a href="#inside-omnicard" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Inside OmniCard</a></li>
+                        <li><a href="#our-license" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Our License</a></li>
+                        <li><a href="#media-awards" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Media &amp; Awards</a></li>
+                        <li><a href="#career" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Career</a></li>
                     </ul>
-                    <h5 className="footer-link-group-title footer-link-group-title--spaced">Learn</h5>
-                    <ul className="footer-links">
-                        <li><a href="#blogs">Blogs</a></li>
-                        <li><a href="#knowledge-hub">Knowledge Hub</a></li>
-                        <li><a href="#user-guides">User Guides</a></li>
-                        <li><a href="#faqs">FAQs</a></li>
+                    <h5 className="font-mulish text-[15px] font-bold text-white m-[30px_0_12px_0] tracking-normal tracking-wide">Learn</h5>
+                    <ul className="list-none m-0 p-0 flex flex-col gap-2">
+                        <li><a href="#blogs" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Blogs</a></li>
+                        <li><a href="#knowledge-hub" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Knowledge Hub</a></li>
+                        <li><a href="#user-guides" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">User Guides</a></li>
+                        <li><a href="#faqs" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">FAQs</a></li>
                     </ul>
                 </div>
 
                 {/* Column 3: Resources (duplicate per Figma) */}
-                <div className="footer-col">
-                    <h4 className="footer-col-heading">Resources</h4>
-                    <h5 className="footer-link-group-title">About</h5>
-                    <ul className="footer-links">
-                        <li><a href="#inside-omnicard">Inside OmniCard</a></li>
-                        <li><a href="#our-license">Our License</a></li>
-                        <li><a href="#media-awards">Media &amp; Awards</a></li>
-                        <li><a href="#career">Career</a></li>
+                <div className="flex flex-col">
+                    <h4 className="font-bebas text-[22px] font-bold tracking-[0.06em] uppercase text-white m-[0_0_20px_0]">Resources</h4>
+                    <h5 className="font-mulish text-[15px] font-bold text-white m-[0_0_12px_0] tracking-normal tracking-wide">About</h5>
+                    <ul className="list-none m-0 p-0 flex flex-col gap-2">
+                        <li><a href="#inside-omnicard" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Inside OmniCard</a></li>
+                        <li><a href="#our-license" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Our License</a></li>
+                        <li><a href="#media-awards" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Media &amp; Awards</a></li>
+                        <li><a href="#career" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Career</a></li>
                     </ul>
-                    <h5 className="footer-link-group-title footer-link-group-title--spaced">Learn</h5>
-                    <ul className="footer-links">
-                        <li><a href="#blogs">Blogs</a></li>
-                        <li><a href="#knowledge-hub">Knowledge Hub</a></li>
-                        <li><a href="#user-guides">User Guides</a></li>
-                        <li><a href="#faqs">FAQs</a></li>
+                    <h5 className="font-mulish text-[15px] font-bold text-white m-[30px_0_12px_0] tracking-normal tracking-wide">Learn</h5>
+                    <ul className="list-none m-0 p-0 flex flex-col gap-2">
+                        <li><a href="#blogs" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Blogs</a></li>
+                        <li><a href="#knowledge-hub" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">Knowledge Hub</a></li>
+                        <li><a href="#user-guides" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">User Guides</a></li>
+                        <li><a href="#faqs" className="font-mulish text-[14px] font-normal text-white/60 no-underline transition-colors duration-200 hover:text-white leading-[1.4]">FAQs</a></li>
                     </ul>
                 </div>
 
                 {/* Column 4: Book a Demo + Support + Download + Social */}
-                <div className="footer-col footer-cta-col">
+                <div className="flex flex-col gap-8 max-[1100px]:col-span-full">
                     {/* Book a Demo */}
-                    <div className="footer-cta-block">
-                        <h4 className="footer-col-heading">Book a Demo</h4>
-                        <a href="mailto:connect@omnicard.in" className="footer-email">
-                            <span className="footer-email-icon" aria-hidden="true">
-                                <img src={emailIcon} alt="Email" />
+                    <div className="flex flex-col gap-2.5">
+                        <h4 className="font-bebas text-[22px] font-bold tracking-[0.06em] uppercase text-white m-0">Book a Demo</h4>
+                        <a href="mailto:connect@omnicard.in" className="inline-flex items-center gap-2 font-mulish text-[14px] font-medium text-white/60 no-underline transition-colors duration-200 hover:text-white">
+                            <span className="flex items-center justify-center opacity-80" aria-hidden="true">
+                                <img src={emailIcon} alt="Email" className="h-[14px] w-auto object-contain grayscale opacity-70" />
                             </span>
                             connect@omnicard.in
                         </a>
                     </div>
 
                     {/* Support Queries */}
-                    <div className="footer-cta-block">
-                        <h4 className="footer-col-heading">Support Queries</h4>
-                        <a href="mailto:care@omnicard.in" className="footer-email footer-email--plain">
+                    <div className="flex flex-col gap-2.5">
+                        <h4 className="font-bebas text-[22px] font-bold tracking-[0.06em] uppercase text-white m-0">Support Queries</h4>
+                        <a href="mailto:care@omnicard.in" className="inline-flex items-center gap-0 font-mulish text-[14px] font-medium text-white/60 no-underline transition-colors duration-200 hover:text-white">
                             care@omnicard.in
                         </a>
                     </div>
 
                     {/* Download App */}
-                    <div className="footer-cta-block">
-                        <h4 className="footer-col-heading">Download App</h4>
-                        <div className="footer-app-badges">
-                            <a href="#app-store" className="footer-badge" aria-label="Download on the App Store">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" />
+                    <div className="flex flex-col gap-3">
+                        <h4 className="font-bebas text-[22px] font-bold tracking-[0.06em] uppercase text-white m-0">Download App</h4>
+                        <div className="flex flex-row gap-2.5 flex-wrap">
+                            <a href="#app-store" className="group" aria-label="Download on the App Store">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" className="h-9 w-auto rounded-md block transition-opacity duration-200 group-hover:opacity-85" />
                             </a>
-                            <a href="#google-play" className="footer-badge" aria-label="Get it on Google Play">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" />
+                            <a href="#google-play" className="group" aria-label="Get it on Google Play">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-9 w-auto rounded-md block transition-opacity duration-200 group-hover:opacity-85" />
                             </a>
                         </div>
                     </div>
 
                     {/* Social Icons */}
-                    <div className="footer-social">
-                        <a href="#youtube" className="footer-social-link" aria-label="YouTube">
-                            <img src={youtubeIcon} alt="YouTube" />
-                        </a>
-                        <a href="#facebook" className="footer-social-link" aria-label="Facebook">
-                            <img src={facebookIcon} alt="Facebook" />
-                        </a>
-                        <a href="#twitter" className="footer-social-link" aria-label="X (Twitter)">
-                            <img src={xIcon} alt="X" />
-                        </a>
-                        <a href="#instagram" className="footer-social-link" aria-label="Instagram">
-                            <img src={instagramIcon} alt="Instagram" />
-                        </a>
-                        <a href="#linkedin" className="footer-social-link" aria-label="LinkedIn">
-                            <img src={linkedinIcon} alt="LinkedIn" />
-                        </a>
+                    <div className="flex flex-row gap-4 items-center flex-wrap mt-1">
+                        {[
+                            { href: "#youtube", icon: youtubeIcon, label: "YouTube" },
+                            { href: "#facebook", icon: facebookIcon, label: "Facebook" },
+                            { href: "#twitter", icon: xIcon, label: "X" },
+                            { href: "#instagram", icon: instagramIcon, label: "Instagram" },
+                            { href: "#linkedin", icon: linkedinIcon, label: "LinkedIn" }
+                        ].map((social, i) => (
+                            <a 
+                                key={i} 
+                                href={social.href} 
+                                className="flex items-center justify-center h-auto transition-all duration-200 hover:-translate-y-0.5 opacity-80 hover:opacity-100" 
+                                aria-label={social.label}
+                            >
+                                <img src={social.icon} alt={social.label} className="w-[18px] h-[18px] object-contain" />
+                            </a>
+                        ))}
                     </div>
                 </div>
             </div>
 
             {/* Large TAISYS Watermark */}
-            <div className="footer-watermark" >
-                <div className='footer-watermark-text'>
+            <div className="w-[90%] max-w-[1392px] mx-auto mt-16 max-[1100px]:mt-10 flex items-end justify-center overflow-hidden pointer-events-none select-none">
+                <div 
+                    className="w-full text-center uppercase whitespace-nowrap"
+                    style={{
+                        marginBottom: '-80px',
+                        fontFamily: '"DIN Condensed", "Bebas Neue", sans-serif',
+                        fontWeight: 700,
+                        fontSize: 'clamp(100px, 200vw, 600px)', // Scales up to your exact 600px Figma height
+                        lineHeight: '100%', // 100% line-height as defined
+                        letterSpacing: '4%', // 4% letter spacing as defined
+                        color: 'rgba(255, 255, 255, 0.20)', // #FFFFFF33 opacity
+                        transform: 'translateY(14%)' // Pushes text visually down to precisely touch bottom of container
+                    }}
+                >
                     TAISYS
                 </div>
-                
             </div>
         </footer>
     );
