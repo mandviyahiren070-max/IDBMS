@@ -112,7 +112,7 @@ const Footer = () => {
                     </div>
 
                     {/* Social Icons */}
-                    <div className="flex flex-row gap-4 items-center flex-wrap mt-1">
+                    <div className="flex flex-row gap-4 items-center flex-wrap mt-1 justify-between mr-12">
                         {[
                             { href: "#youtube", icon: youtubeIcon, label: "YouTube" },
                             { href: "#facebook", icon: facebookIcon, label: "Facebook" },
@@ -123,10 +123,15 @@ const Footer = () => {
                             <a 
                                 key={i} 
                                 href={social.href} 
-                                className="flex items-center justify-center h-auto transition-all duration-200 hover:-translate-y-0.5 opacity-80 hover:opacity-100" 
+                                className="flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 opacity-100" 
                                 aria-label={social.label}
                             >
-                                <img src={social.icon} alt={social.label} className="w-[18px] h-[18px] object-contain" />
+                                <img 
+                                    src={social.icon} 
+                                    alt={social.label} 
+                                    style={{ width: '19.957px', height: '13.968px' }}
+                                    className="object-contain filter brightness-0 invert" 
+                                />
                             </a>
                         ))}
                     </div>
