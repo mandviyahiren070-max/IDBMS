@@ -27,7 +27,7 @@ const JoinUs = () => {
             <div className="relative z-[1] w-[95%] max-w-[1200px] mx-auto">
                 {/* Header Section */}
                 <div className="flex justify-between items-center mb-[60px] max-[768px]:flex-col max-[768px]:items-start max-[768px]:gap-5 max-[768px]:mb-10">
-                    <h2 className="font-bebas text-[clamp(60px,8vw,120px)] font-bold leading-none tracking-normal text-white m-0">Join us</h2>
+                    <h2 className="text-[clamp(60px,8vw,120px)] font-bold leading-none text-white m-0" style={{ fontFamily: '"DIN Condensed", sans-serif', letterSpacing: '-0.005em' }}>Join us</h2>
                     <a 
                         href="#learn-more" 
                         className="flex items-center justify-center w-[137px] h-[38px] rounded-[20px] p-[8px_16px] gap-[10px] bg-[#F2640E] shadow-[inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] text-white font-mulish text-base font-bold no-underline box-border transition-all duration-200 hover:scale-105 hover:brightness-110"

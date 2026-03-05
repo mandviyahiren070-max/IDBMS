@@ -98,7 +98,19 @@ const GetInTouch = () => {
               loading="lazy"
             />
             
-            <h2 className="font-bebas text-[clamp(40px,6vw,84px)] max-[600px]:text-[clamp(36px,10vw,56px)] font-bold leading-none tracking-normal text-white m-[0_0_60px_0] max-[600px]:mb-10 text-center">Get in Touch with us</h2>
+            <h2 
+                className="text-center font-bold mb-[60px] max-[600px]:mb-10" 
+                style={{ 
+                    fontFamily: '"DIN Condensed", sans-serif',
+                    fontWeight: 700,
+                    fontSize: 'clamp(44px, 6vw, 60px)', /* Set max size exactly to 60px per Figma */
+                    lineHeight: '100%',
+                    letterSpacing: '-0.005em', /* -0.5% letter spacing */
+                    color: '#FFFFFF'
+                }}
+            >
+                Get in Touch with us
+            </h2>
             
             <div className="flex justify-center items-stretch gap-8 w-[90%] max-w-[1160px] max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:gap-10">
                 {/* Left Side: Image Box */}
