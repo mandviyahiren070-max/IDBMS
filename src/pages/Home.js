@@ -42,7 +42,7 @@ function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="hero-content mt-[140px] md:mt-[180px] px-4 md:px-5">
+        <div className="hero-content mt-[210px] md:mt-[180px] px-4 md:px-5">
           <h1 className="hero-title text-center text-white 
              text-[max(36px,10vw)] md:text-[clamp(60px,9vw,130px)]
              leading-[1.1] md:leading-[1.4] tracking-wider font-bold">
