@@ -2,14 +2,14 @@ import React from 'react';
 import './Footer.css';
 
 // Import Assets
-import footerCone from '../assets/images/Cone_01-12.png';
-import taisysLogo from '../assets/images/TAISYS-logo.png';
-import emailIcon from '../assets/icons/Email.svg';
-import youtubeIcon from '../assets/icons/youtube.svg';
-import facebookIcon from '../assets/icons/facebook.svg';
-import xIcon from '../assets/icons/X_logo_2023_(white) 1.svg';
-import instagramIcon from '../assets/icons/instagram.svg';
-import linkedinIcon from '../assets/icons/linkedin.svg';
+import footerCone from "../../assets/images/Cone_01-12.png";
+import taisysLogo from "../../assets/images/TAISYS-logo.png";
+import emailIcon from "../../assets/icons/Email.svg";
+import youtubeIcon from "../../assets/icons/youtube.svg";
+import facebookIcon from "../../assets/icons/facebook.svg";
+import xIcon from "../../assets/icons/X_logo_2023_(white) 1.svg";
+import instagramIcon from "../../assets/icons/instagram.svg";
+import linkedinIcon from "../../assets/icons/linkedin.svg";
 
 const Footer = () => {
     return (

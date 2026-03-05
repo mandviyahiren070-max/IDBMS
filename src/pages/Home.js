@@ -1,10 +1,10 @@
 import React from "react";
 import "./Home.css";
-import WhyTwpass from "./WhyTwpass";
-import JoinUs from "./JoinUs";
-import GetInTouch from "./GetInTouch";
-import Footer from "./Footer";
-import taisysLogo from "../assets/images/TAISYS-logo.png";
+import Navbar from "../components/Navbar/Navbar";
+import WhyTwpass from "../components/Sections/WhyTwpass";
+import JoinUs from "../components/Sections/JoinUs";
+import GetInTouch from "../components/Sections/GetInTouch";
+import Footer from "../components/Sections/Footer";
 import heroBg from "../assets/images/TWPASS-ALLIANCE.webp";
 
 function Home() {
@@ -16,57 +16,40 @@ function Home() {
            md:w-[900px] md:h-[900px] md:-top-[650px] md:-right-[450px] md:blur-[180px] md:opacity-85" 
            aria-hidden="true"></div>
 
-      {/* Navbar (At root so it sticks across whole page) */}
-      <nav className="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-        {/* Logo */}
-        <a href="/" className="navbar-logo" aria-label="TAISYS Home">
-          <img
-            src={taisysLogo}
-            alt="TAISYS Logo"
-          />
-        </a>
+      {/* Navbar Component */}
+      <Navbar />
 
-        {/* Book a Demo CTA */}
-        <a href="#book-demo" className="btn-book-demo" id="btn-book-demo">
-          Book a demo
-        </a>
-      </nav>
+      <main>
+        {/* ===== HERO SECTION ===== */}
+        <section className="hero-section" id="hero">
+          {/* Background Image */}
+          <div className="hero-bg">
+            <img
+              src={heroBg}
+              alt="TWPASS Alliance - Secure Digital Identity"
+              loading="eager"
+            />
+          </div>
 
-      {/* ===== HERO SECTION ===== */}
-      <section className="hero-section" id="hero">
-        {/* Background Image */}
-        <div className="hero-bg">
-          <img
-            src={heroBg}
-            alt="TWPASS Alliance - Secure Digital Identity"
-            loading="eager"
-          />
-        </div>
+          {/* Hero Content */}
+          <div className="hero-content mt-[210px] md:mt-[180px] px-4 md:px-5">
+            <h1 className="hero-title text-center text-white 
+               text-[max(36px,10vw)] md:text-[clamp(60px,9vw,130px)]
+               leading-[1.1] md:leading-[1.4] tracking-wider font-bold">
+              TWPASS ALLIANCE
+            </h1>
+          </div>
+        </section>
 
-        {/* Hero Content */}
-        <div className="hero-content mt-[210px] md:mt-[180px] px-4 md:px-5">
-          <h1 className="hero-title text-center text-white 
-             text-[max(36px,10vw)] md:text-[clamp(60px,9vw,130px)]
-             leading-[1.1] md:leading-[1.4] tracking-wider font-bold">
-            TWPASS ALLIANCE
-          </h1>
-        </div>
-      </section>
+        {/* ===== SECTIONS ===== */}
+        <WhyTwpass />
+        <JoinUs />
+        <GetInTouch />
+      </main>
 
-      {/* ===== SECOND MODULE: WHY TWPASS ===== */}
-      <WhyTwpass />
-
-      {/* ===== THIRD MODULE: JOIN US ===== */}
-      <JoinUs />
-
-      {/* ===== FOURTH MODULE: GET IN TOUCH ===== */}
-      <GetInTouch />
-
-      {/* ===== FOOTER ===== */}
       <Footer />
     </div>
   );
 }
-
 
 export default Home;

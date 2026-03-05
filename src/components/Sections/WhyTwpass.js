@@ -2,16 +2,16 @@ import React, { useEffect, useRef } from "react";
 import "./WhyTwpass.css";
 
 // Import Icons
-import enhancedSecurityIcon from "../assets/icons/Enhanced-Security.svg";
-import seamlessInteroperabilityIcon from "../assets/icons/Seamless-Interoperability.svg";
-import elevatedUserTrustIcon from "../assets/icons/empty-wallet-add.svg";
-import simplifiedOnboardingIcon from "../assets/icons/Simplified-Onboarding.svg";
-import scalableServicesIcon from "../assets/icons/Scalable Services.svg";
-import universalTechIcon from "../assets/icons/Universal & Future-Proof Technology.svg";
+import enhancedSecurityIcon from "../../assets/icons/Enhanced-Security.svg";
+import seamlessInteroperabilityIcon from "../../assets/icons/Seamless-Interoperability.svg";
+import elevatedUserTrustIcon from "../../assets/icons/empty-wallet-add.svg";
+import simplifiedOnboardingIcon from "../../assets/icons/Simplified-Onboarding.svg";
+import scalableServicesIcon from "../../assets/icons/Scalable Services.svg";
+import universalTechIcon from "../../assets/icons/Universal & Future-Proof Technology.svg";
 
 // Import Images
-import ringDeco from "../assets/images/Rring.webp";
-import chatgptImg from "../assets/images/ChatGPT Imag.webp";
+import ringDeco from "../../assets/images/Rring.webp";
+import chatgptImg from "../../assets/images/ChatGPT Imag.webp";
 
 /* ─── Feature card data ─────────────────────────────────────────── */
 const features = [

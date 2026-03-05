@@ -2,11 +2,11 @@ import React from 'react';
 import './JoinUs.css';
 
 // Import Assets
-import joinUsCone from '../assets/images/Cone_01-9.png';
-import mnoImg from '../assets/images/MNO.webp';
-import serviceProviderImg from '../assets/images/Servic-Provider.webp';
-import paymentGatewayImg from '../assets/images/Payment-Gateway.webp';
-import governmentImg from '../assets/images/Government.webp';
+import joinUsCone from "../../assets/images/Cone_01-9.png";
+import mnoImg from "../../assets/images/MNO.webp";
+import serviceProviderImg from "../../assets/images/Servic-Provider.webp";
+import paymentGatewayImg from "../../assets/images/Payment-Gateway.webp";
+import governmentImg from "../../assets/images/Government.webp";
 
 const JoinUs = () => {
     return (

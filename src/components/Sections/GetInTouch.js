@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './GetInTouch.css';
 
 // Import Assets
-import ringCornDeco from '../assets/images/Ring Corn.png';
-import getInTouchImg from '../assets/images/Get-in-Touch-with-us.webp';
+import ringCornDeco from "../../assets/images/Ring Corn.png";
+import getInTouchImg from "../../assets/images/Get-in-Touch-with-us.webp";
 
 const GetInTouch = () => {
     const [formData, setFormData] = useState({
