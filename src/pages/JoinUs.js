@@ -1,12 +1,19 @@
 import React from 'react';
 import './JoinUs.css';
 
+// Import Assets
+import joinUsCone from '../assets/images/Cone_01-9.png';
+import mnoImg from '../assets/images/MNO.webp';
+import serviceProviderImg from '../assets/images/Servic-Provider.webp';
+import paymentGatewayImg from '../assets/images/Payment-Gateway.webp';
+import governmentImg from '../assets/images/Government.webp';
+
 const JoinUs = () => {
     return (
         <section className="joinus-section" id="join-us">
             {/* Background Element */}
             <div className="joinus-bg">
-                <img src="/assets/images/Cone_01-9.png" alt="" className="joinus-cone" />
+                <img src={joinUsCone} alt="" className="joinus-cone" />
             </div>
 
             <div className="joinus-container">
@@ -20,7 +27,7 @@ const JoinUs = () => {
                 <div className="joinus-grid">
                     <div className="joinus-card">
                         <div className="joinus-card-img-wrap">
-                            <img src="/assets/images/MNO.webp" alt="MNO" className="joinus-card-img" />
+                            <img src={mnoImg} alt="MNO" className="joinus-card-img" />
                             <div className="joinus-card-overlay">
                                 <h3 className="joinus-card-title">MNO</h3>
                             </div>
@@ -29,7 +36,7 @@ const JoinUs = () => {
                     
                     <div className="joinus-card">
                         <div className="joinus-card-img-wrap">
-                            <img src="/assets/images/Servic-Provider.webp" alt="Service Provider" className="joinus-card-img" />
+                            <img src={serviceProviderImg} alt="Service Provider" className="joinus-card-img" />
                             <div className="joinus-card-overlay">
                                 <h3 className="joinus-card-title">Service Provider</h3>
                             </div>
@@ -38,7 +45,7 @@ const JoinUs = () => {
                     
                     <div className="joinus-card">
                         <div className="joinus-card-img-wrap">
-                            <img src="/assets/images/Payment-Gateway.webp" alt="Payment Gateway" className="joinus-card-img" />
+                            <img src={paymentGatewayImg} alt="Payment Gateway" className="joinus-card-img" />
                             <div className="joinus-card-overlay">
                                 <h3 className="joinus-card-title">Payment Gateway</h3>
                             </div>
@@ -47,7 +54,7 @@ const JoinUs = () => {
                     
                     <div className="joinus-card">
                         <div className="joinus-card-img-wrap">
-                            <img src="/assets/images/Government.webp" alt="Government" className="joinus-card-img" />
+                            <img src={governmentImg} alt="Government" className="joinus-card-img" />
                             <div className="joinus-card-overlay">
                                 <h3 className="joinus-card-title">Government</h3>
                             </div>

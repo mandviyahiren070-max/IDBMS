@@ -1,12 +1,22 @@
 import React from 'react';
 import './Footer.css';
 
+// Import Assets
+import footerCone from '../assets/images/Cone_01-12.png';
+import taisysLogo from '../assets/images/TAISYS-logo.png';
+import emailIcon from '../assets/icons/Email.svg';
+import youtubeIcon from '../assets/icons/youtube.svg';
+import facebookIcon from '../assets/icons/facebook.svg';
+import xIcon from '../assets/icons/X_logo_2023_(white) 1.svg';
+import instagramIcon from '../assets/icons/instagram.svg';
+import linkedinIcon from '../assets/icons/linkedin.svg';
+
 const Footer = () => {
     return (
         <footer className="footer-section" id="footer">
             {/* Right Bottom Cone Background */}
             <img
-                src="/assets/images/Cone_01-12.png"
+                src={footerCone}
                 alt=""
                 className="footer-cone"
                 aria-hidden="true"
@@ -20,7 +30,7 @@ const Footer = () => {
                 <div className="footer-col footer-brand">
                     <a href="/" className="footer-logo-link" aria-label="TAISYS Home">
                         <img
-                            src="/assets/images/TAISYS-logo.png"
+                            src={taisysLogo}
                             alt="TAISYS Logo"
                             className="footer-logo"
                         />
@@ -75,7 +85,7 @@ const Footer = () => {
                         <h4 className="footer-col-heading">Book a Demo</h4>
                         <a href="mailto:connect@omnicard.in" className="footer-email">
                             <span className="footer-email-icon" aria-hidden="true">
-                                <img src="/assets/icons/Email.svg" alt="Email" />
+                                <img src={emailIcon} alt="Email" />
                             </span>
                             connect@omnicard.in
                         </a>
@@ -105,19 +115,19 @@ const Footer = () => {
                     {/* Social Icons */}
                     <div className="footer-social">
                         <a href="#youtube" className="footer-social-link" aria-label="YouTube">
-                            <img src="/assets/icons/youtube.svg" alt="YouTube" />
+                            <img src={youtubeIcon} alt="YouTube" />
                         </a>
                         <a href="#facebook" className="footer-social-link" aria-label="Facebook">
-                            <img src="/assets/icons/facebook.svg" alt="Facebook" />
+                            <img src={facebookIcon} alt="Facebook" />
                         </a>
                         <a href="#twitter" className="footer-social-link" aria-label="X (Twitter)">
-                            <img src="/assets/icons/X_logo_2023_(white)%201.svg" alt="X" />
+                            <img src={xIcon} alt="X" />
                         </a>
                         <a href="#instagram" className="footer-social-link" aria-label="Instagram">
-                            <img src="/assets/icons/instagram.svg" alt="Instagram" />
+                            <img src={instagramIcon} alt="Instagram" />
                         </a>
                         <a href="#linkedin" className="footer-social-link" aria-label="LinkedIn">
-                            <img src="/assets/icons/linkedin.svg" alt="LinkedIn" />
+                            <img src={linkedinIcon} alt="LinkedIn" />
                         </a>
                     </div>
                 </div>

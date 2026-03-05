@@ -1,46 +1,58 @@
 import React, { useEffect, useRef } from "react";
 import "./WhyTwpass.css";
 
+// Import Icons
+import enhancedSecurityIcon from "../assets/icons/Enhanced-Security.svg";
+import seamlessInteroperabilityIcon from "../assets/icons/Seamless-Interoperability.svg";
+import elevatedUserTrustIcon from "../assets/icons/empty-wallet-add.svg";
+import simplifiedOnboardingIcon from "../assets/icons/Simplified-Onboarding.svg";
+import scalableServicesIcon from "../assets/icons/Scalable Services.svg";
+import universalTechIcon from "../assets/icons/Universal & Future-Proof Technology.svg";
+
+// Import Images
+import ringDeco from "../assets/images/Rring.webp";
+import chatgptImg from "../assets/images/ChatGPT Imag.webp";
+
 /* ─── Feature card data ─────────────────────────────────────────── */
 const features = [
   {
     id: "enhanced-security",
-    icon: "/assets/icons/Enhanced-Security.svg",
+    icon: enhancedSecurityIcon,
     title: "Enhanced Security",
     tagline: "Security starts at the hardware level →",
     desc: "Security starts at the hardware level. Identity is anchored within a secure eSIM element, providing robust protection against fraud, SMS OTP scams, and a wide range of malicious attacks.",
   },
   {
     id: "seamless-interoperability",
-    icon: "/assets/icons/Seamless-Interoperability.svg",
+    icon: seamlessInteroperabilityIcon,
     title: "Seamless Interoperability",
     tagline: "Your identity goes wherever you go →",
     desc: "By leveraging eSIM technology, TWPASS integrates seamlessly with service platforms, allowing users to carry their identity wallet anywhere and transact securely worldwide.",
   },
   {
     id: "elevated-user-trust",
-    icon: "/assets/icons/empty-wallet-add.svg",
+    icon: elevatedUserTrustIcon,
     title: "Elevated User Trust",
     tagline: "Trust begins with user control →",
     desc: "TWPASS enables passwordless, data-less login experiences that give users full control over their data, strengthening trust and confidence.",
   },
   {
     id: "simplified-onboarding",
-    icon: "/assets/icons/Simplified-Onboarding.svg",
+    icon: simplifiedOnboardingIcon,
     title: "Simplified Onboarding",
     tagline: "User onboarding has never been easier →",
     desc: "With TWPASS, users can onboard to your platform quickly and seamlessly.",
   },
   {
     id: "scalable-services",
-    icon: "/assets/icons/Scalable Services.svg",
+    icon: scalableServicesIcon,
     title: "Scalable Services",
     tagline: "Scale without limits →",
     desc: "Grow globally and integrate across services using digital identity credentials, payments, and digital assets.",
   },
   {
     id: "universal-technology",
-    icon: "/assets/icons/Universal & Future-Proof Technology.svg",
+    icon: universalTechIcon,
     title: "Universal & Future-Proof Technology",
     tagline: "Built for today. Ready for what's next →",
     desc: "Security starts at the hardware level. Identity is anchored within a secure eSIM element, providing robust protection against fraud, SMS OTP scams, and a wide range of malicious attacks.",
@@ -79,7 +91,7 @@ export default function WhyTwpass() {
       {/* ── Decorative background elements ── */}
       <img
         className="wt-deco wt-deco-ring"
-        src="/assets/images/Rring.webp"
+        src={ringDeco}
         alt=""
         aria-hidden="true"
         loading="lazy"
@@ -107,7 +119,7 @@ export default function WhyTwpass() {
         <div className="wt-intro-img-wrap">
           <img
             className="wt-intro-img"
-            src="/assets/images/ChatGPT Imag.webp"
+            src={chatgptImg}
             alt="TWPASS Verify – fingerprint and shield visual"
             loading="lazy"
           />

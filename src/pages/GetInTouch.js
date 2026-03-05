@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './GetInTouch.css';
 
+// Import Assets
+import ringCornDeco from '../assets/images/Ring Corn.png';
+import getInTouchImg from '../assets/images/Get-in-Touch-with-us.webp';
+
 const GetInTouch = () => {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -87,7 +91,7 @@ const GetInTouch = () => {
             <div className="git-bg-gradient"></div>
             <img
               className="git-bg-ring"
-              src="/assets/images/Ring Corn.png"
+              src={ringCornDeco}
               alt=""
               aria-hidden="true"
               loading="lazy"
@@ -99,7 +103,7 @@ const GetInTouch = () => {
                 {/* Left Side: Image Box */}
                 <div className="git-image-box">
                     <img 
-                      src="/assets/images/Get-in-Touch-with-us.webp" 
+                      src={getInTouchImg} 
                       alt="Get In Touch" 
                       className="git-image" 
                     />

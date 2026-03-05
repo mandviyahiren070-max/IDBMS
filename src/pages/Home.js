@@ -4,6 +4,8 @@ import WhyTwpass from "./WhyTwpass";
 import JoinUs from "./JoinUs";
 import GetInTouch from "./GetInTouch";
 import Footer from "./Footer";
+import taisysLogo from "../assets/images/TAISYS-logo.png";
+import heroBg from "../assets/images/TWPASS-ALLIANCE.webp";
 
 function Home() {
   return (
@@ -19,7 +21,7 @@ function Home() {
         {/* Logo */}
         <a href="/" className="navbar-logo" aria-label="TAISYS Home">
           <img
-            src="/assets/images/TAISYS-logo.png"
+            src={taisysLogo}
             alt="TAISYS Logo"
           />
         </a>
@@ -35,7 +37,7 @@ function Home() {
         {/* Background Image */}
         <div className="hero-bg">
           <img
-            src="/assets/images/TWPASS-ALLIANCE.webp"
+            src={heroBg}
             alt="TWPASS Alliance - Secure Digital Identity"
             loading="eager"
           />
