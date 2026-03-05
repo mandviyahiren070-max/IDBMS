@@ -134,22 +134,24 @@ const Footer = () => {
             </div>
 
             {/* Large TAISYS Watermark */}
-            <div className="w-[90%] max-w-[1392px] mx-auto mt-16 max-[1100px]:mt-10 flex items-end justify-center overflow-hidden pointer-events-none select-none">
-                <div 
-                    className="w-full text-center uppercase whitespace-nowrap"
-                    style={{
-                        marginBottom: '-80px',
-                        fontFamily: '"DIN Condensed", "Bebas Neue", sans-serif',
-                        fontWeight: 700,
-                        fontSize: 'clamp(100px, 200vw, 600px)', // Scales up to your exact 600px Figma height
-                        lineHeight: '100%', // 100% line-height as defined
-                        letterSpacing: '4%', // 4% letter spacing as defined
-                        color: 'rgba(255, 255, 255, 0.20)', // #FFFFFF33 opacity
-                        transform: 'translateY(14%)' // Pushes text visually down to precisely touch bottom of container
-                    }}
-                >
-                    TAISYS
-                </div>
+            <div className="w-[90%] max-[700px]:w-[92%] max-w-[1200px] mx-auto mt-20 max-[1100px]:mt-12 flex items-end justify-center pointer-events-none select-none relative z-10">
+                <svg width="100%" viewBox="0 0 1000 400" className="w-full h-auto translate-y-[8%] overflow-visible">
+                    <text 
+                        x="0" 
+                        y="360" 
+                        textLength="1000"
+                        lengthAdjust="spacing"
+                        style={{
+                            fontFamily: '"DIN Condensed", "Bebas Neue", sans-serif',
+                            fontWeight: 700,
+                            fontSize: '430px',
+                            fill: 'rgba(255, 255, 255, 0.08)',
+                            textTransform: 'uppercase'
+                        }}
+                    >
+                        TAISYS
+                    </text>
+                </svg>
             </div>
         </footer>
     );
