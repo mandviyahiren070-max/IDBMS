@@ -10,27 +10,97 @@
 
   body {
     margin: 0;
-    @apply bg-[#05060d] text-white antialiased selection:bg-brand-orange selection:text-white;
+    @apply bg-brand-dark text-white antialiased;
     font-family: 'Mulish', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
   }
 
-  /* Scrollbar Styling */
+  ::selection {
+    @apply bg-brand-orange text-white;
+  }
+
+  /* Scrollbar */
   ::-webkit-scrollbar {
     width: 10px;
   }
-
   ::-webkit-scrollbar-track {
     background: #05060d;
   }
-
   ::-webkit-scrollbar-thumb {
     background: #1a1b26;
     border-radius: 5px;
     border: 2px solid #05060d;
   }
-
   ::-webkit-scrollbar-thumb:hover {
     background: #2a2b36;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-[40px] border border-white/10 rounded-2xl;
+  }
+
+  /* Gradient border base (used with mask technique) */
+  .gradient-border-default {
+    background: linear-gradient(
+      135.72deg,
+      rgba(255, 255, 255, 0.27) 8.53%,
+      rgba(255, 255, 255, 0) 60.59%,
+      rgba(255, 255, 255, 0.33) 93.17%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .gradient-border-hover {
+    background: linear-gradient(
+      136.15deg,
+      rgba(255, 173, 126, 0.90) 8.56%,
+      rgba(255, 215, 192, 0.90) 31.42%,
+      rgba(255, 174, 127, 0.90) 69.16%,
+      rgba(255, 255, 255, 0.90) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  /* Primary CTA Button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full
+           bg-gradient-to-br from-brand-orange to-brand-orange-light
+           text-white font-mulish font-bold text-center cursor-pointer
+           transition-all duration-300 no-underline whitespace-nowrap
+           shadow-[0_2px_12px_rgba(242,100,14,0.35)]
+           hover:from-brand-orange-light hover:to-brand-orange
+           hover:shadow-[0_4px_20px_rgba(242,100,14,0.55)]
+           hover:-translate-y-px active:translate-y-px;
+  }
+
+  /* Hero title glow */
+  .hero-glow {
+    text-shadow: 3px 6px 5.5px #F2640E,
+                 0 0 40px rgba(242, 100, 14, 0.45),
+                 0 0 80px rgba(242, 100, 14, 0.2);
+  }
+
+  /* Section container - Figma content width is 1200px */
+  .section-container {
+    @apply w-full max-w-content mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Form input */
+  .form-input {
+    @apply h-12 rounded-full border border-white/10 bg-black/20
+           text-white font-mulish text-[15px] px-5 outline-none
+           transition-all duration-200
+           focus:border-white/30 focus:bg-black/40;
+  }
+
+  .form-input-error {
+    @apply border-red-500;
   }
 }
