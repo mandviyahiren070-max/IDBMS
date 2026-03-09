@@ -76,7 +76,7 @@ const WhyAlliance = () => {
         className="absolute pointer-events-none select-none z-0 hidden sm:block w-[400px] lg:w-[900px] top-[-65%] object-contain"
         src={ringDeco}
         alt=""
-        aria-hidden="true"
+        aria-hidden="true" 
         loading="lazy"
       />
 

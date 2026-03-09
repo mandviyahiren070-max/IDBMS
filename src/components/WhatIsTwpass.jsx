@@ -48,7 +48,7 @@ const WhatIsTwpass = () => {
         <div className="flex items-center justify-center lg:justify-end relative">
           {/* Glow behind image */}
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%]
+            className="absolute top-1/2 left-1/2 -translate-x-[40%] -translate-y-1/2 w-[150%] h-[150%]
                        bg-[radial-gradient(circle_at_center,rgba(0,80,255,0.55)_0%,rgba(0,30,200,0.25)_30%,transparent_70%)]
                        blur-[50px] z-[-1] pointer-events-none"
             aria-hidden="true"
