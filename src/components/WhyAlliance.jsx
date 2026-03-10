@@ -1,5 +1,6 @@
 import React from "react";
 import FeatureCard from "./FeatureCard";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 // Import Icons
 import enhancedSecurityIcon from "../assets/icons/Enhanced-Security.svg";
@@ -58,6 +59,8 @@ const features = [
 ];
 
 const WhyAlliance = () => {
+  const headingRef = useScrollReveal({ delay: 0 });
+
   return (
     <section
       className="relative w-full py-12 sm:py-16 lg:py-20 z-0"
@@ -76,17 +79,22 @@ const WhyAlliance = () => {
         className="absolute pointer-events-none select-none z-0 hidden sm:block w-[400px] lg:w-[900px] top-[-65%] object-contain"
         src={ringDeco}
         alt=""
-        aria-hidden="true" 
+        aria-hidden="true"
         loading="lazy"
       />
 
       <div className="section-container relative z-10">
+        {/* Heading — blur reveal */}
         <div className="text-center mb-16 sm:mb-20">
-          <h2 className="font-din text-4xl sm:text-6xl lg:text-8xl xl:text-section-title font-bold text-white mb-6 uppercase leading-none">
+          <h2
+            ref={headingRef}
+            className="reveal-blur font-din text-4xl sm:text-6xl lg:text-8xl xl:text-section-title font-bold text-white mb-6 uppercase leading-none"
+          >
             Why TWPASS Alliance?
           </h2>
         </div>
 
+        {/* Cards — each staggered from bottom */}
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"
           id="wt-features-grid"
@@ -98,7 +106,7 @@ const WhyAlliance = () => {
               title={feat.title}
               tagline={feat.tagline}
               description={feat.desc}
-              delay={i * 80}
+              delay={i * 100}
             />
           ))}
         </div>

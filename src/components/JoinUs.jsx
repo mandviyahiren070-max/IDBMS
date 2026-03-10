@@ -1,5 +1,6 @@
 import React from "react";
 import JoinCard from "./JoinCard";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 // Import Assets
 import joinUsCone from "../assets/images/Cone_01-9.png";
@@ -16,6 +17,9 @@ const cards = [
 ];
 
 const JoinUs = () => {
+  const headingRef = useScrollReveal({ delay: 0 });
+  const btnRef = useScrollReveal({ delay: 150 });
+
   return (
     <section
       className="relative w-full py-16 sm:py-20 lg:py-24 z-[1]"
@@ -43,18 +47,24 @@ const JoinUs = () => {
       <div className="section-container relative z-10">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-12 sm:mb-16 gap-6">
-          <h2 className="font-din text-5xl sm:text-7xl lg:text-8xl xl:text-section-title font-bold text-white uppercase leading-none">
+          <h2
+            ref={headingRef}
+            className="reveal-blur font-din text-5xl sm:text-7xl lg:text-8xl xl:text-section-title font-bold text-white uppercase leading-none"
+          >
             Join Us
           </h2>
-          <button className="btn-primary px-8 py-3 text-sm tracking-wider uppercase font-bold">
+          <button
+            ref={btnRef}
+            className="reveal-scale btn-primary px-8 py-3 text-sm tracking-wider uppercase font-bold"
+          >
             Learn more
           </button>
         </div>
 
-        {/* Cards Grid */}
+        {/* Cards Grid — staggered reveal */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {cards.map((card, i) => (
-            <JoinCard key={i} title={card.title} image={card.img} />
+            <JoinCard key={i} title={card.title} image={card.img} delay={i * 110} />
           ))}
         </div>
       </div>

@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 // Import Assets
 import ringCornDeco from "../assets/images/Ring Corn.png";
 import getInTouchImg from "../assets/images/Get-in-Touch-with-us.webp";
 
 const ContactSection = () => {
+  const headingRef = useScrollReveal({ delay: 0 });
+  const imgBoxRef = useScrollReveal({ delay: 80 });
+  const formBoxRef = useScrollReveal({ delay: 180 });
   const [formData, setFormData] = useState({
     firstName: "",
-    lastName: "",
+    lastName: "",     
     jobTitle: "",
     companyName: "",
     companyEmail: "",
@@ -30,15 +34,37 @@ const ContactSection = () => {
       Object.entries(formData).map(([k, v]) => [k, v.trim()])
     );
 
-    if (!trimmed.firstName) newErrors.firstName = "First Name is required.";
-    if (!trimmed.lastName) newErrors.lastName = "Last Name is required.";
+    // First Name: required, no spaces allowed
+    if (!trimmed.firstName) {
+      newErrors.firstName = "First Name is required.";
+    } else if (/\s/.test(trimmed.firstName)) {
+      newErrors.firstName = "First Name cannot contain spaces.";
+    }
+
+    // Last Name: required, no spaces allowed
+    if (!trimmed.lastName) {
+      newErrors.lastName = "Last Name is required.";
+    } else if (/\s/.test(trimmed.lastName)) {
+      newErrors.lastName = "Last Name cannot contain spaces.";
+    }
+
+    // Job Title: required
     if (!trimmed.jobTitle) newErrors.jobTitle = "Job Title is required.";
+
+    // Company Name: required
     if (!trimmed.companyName) newErrors.companyName = "Company Name is required.";
 
+    // Email: required + strict format validation (must have @, valid domain, and TLD)
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!trimmed.companyEmail) newErrors.companyEmail = "Email is required.";
-    else if (!emailRegex.test(trimmed.companyEmail)) newErrors.companyEmail = "Please enter a valid email address.";
+    if (!trimmed.companyEmail) {
+      newErrors.companyEmail = "Email is required.";
+    } else if (/\s/.test(trimmed.companyEmail)) {
+      newErrors.companyEmail = "Email cannot contain spaces.";
+    } else if (!emailRegex.test(trimmed.companyEmail)) {
+      newErrors.companyEmail = "Please enter a valid email (e.g. name@company.com).";
+    }
 
+    // Message: required
     if (!trimmed.message) newErrors.message = "Message is required.";
 
     setErrors(newErrors);
@@ -81,7 +107,7 @@ const ContactSection = () => {
       {/* Ring decoration */}
       <img
         className="absolute pointer-events-none select-none z-0
-                   hidden sm:block sm:w-[400px] lg:w-[60vw] lg:max-w-[1300px]
+                   hidden sm:block sm:w-[400px] lg:w-[60vw] lg:max-w-[900px]
                    -top-1/3 -left-[200px] lg:-left-[133px] object-contain"
         src={ringCornDeco}
         alt=""
@@ -91,14 +117,17 @@ const ContactSection = () => {
 
       {/* Content Container */}
       <div className="section-container relative z-10">
-        <h2 className="text-center font-din text-4xl sm:text-6xl lg:text-8xl xl:text-section-title font-bold text-white mb-12 sm:mb-16 uppercase leading-none">
+        <h2
+          ref={headingRef}
+          className="reveal-blur text-center font-din text-4xl sm:text-6xl lg:text-8xl xl:text-section-title font-bold text-white mb-12 sm:mb-16 uppercase leading-none"
+        >
           GET IN TOUCH WITH US
         </h2>
 
         {/* Content: Image + Form */}
         <div className="flex flex-col lg:flex-row justify-center items-stretch gap-6 sm:gap-8">
           {/* Left: Image */}
-          <div className="w-full lg:w-[38%] border border-white/20 rounded-3xl p-4 sm:p-5 bg-[#04071e]/30 backdrop-blur-[20px] flex items-stretch justify-center">
+          <div ref={imgBoxRef} className="reveal-left w-full lg:w-[38%] border border-white/20 rounded-3xl p-4 sm:p-5 bg-[#04071e]/30 backdrop-blur-[20px] flex items-stretch justify-center">
             <img
               src={getInTouchImg}
               alt="Get In Touch"
@@ -108,8 +137,8 @@ const ContactSection = () => {
           </div>
 
           {/* Right: Form */}
-          <div className="w-full lg:w-[62%] border border-white/20 rounded-3xl p-6 sm:p-8 lg:p-10 bg-[#04071e]/30 backdrop-blur-[20px] flex flex-col">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5 sm:gap-6">
+          <div ref={formBoxRef} className="reveal-right w-full lg:w-[62%] border border-white/20 rounded-3xl p-6 sm:p-8 lg:p-10 bg-[#04071e]/30 backdrop-blur-[20px] flex flex-col">
+            <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5 sm:gap-6">
               {/* Row 1 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                 <div className="flex flex-col gap-2 relative">
@@ -184,13 +213,14 @@ const ContactSection = () => {
                   Company Email
                 </label>
                 <input
-                  type="email"
+                  type="text"
                   id="companyEmail"
                   name="companyEmail"
                   value={formData.companyEmail}
                   onChange={handleChange}
                   className={inputClass("companyEmail")}
                   autoComplete="email"
+                  inputMode="email"
                 />
                 {errors.companyEmail && <span className="text-red-500 text-[10px] absolute -bottom-4 left-4">{errors.companyEmail}</span>}
               </div>

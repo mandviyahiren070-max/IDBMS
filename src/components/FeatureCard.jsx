@@ -1,37 +1,17 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 const FeatureCard = ({ icon, title, tagline, description, delay = 0 }) => {
-  const cardRef = useRef(null);
-
-  useEffect(() => {
-    const el = cardRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("opacity-100", "translate-y-0");
-          el.classList.remove("opacity-0", "translate-y-10");
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  const cardRef = useScrollReveal({ delay });
 
   return (
     <article
       ref={cardRef}
-      className="group relative rounded-2xl lg:rounded-[29px] p-5 sm:p-6 lg:p-7
+      className="reveal-up group relative rounded-2xl lg:rounded-[29px] p-5 sm:p-6 lg:p-7
                  min-h-[200px] sm:min-h-[240px]
                  bg-white/5 backdrop-blur-[40px] border-2 border-transparent
-                 transition-all duration-350 cursor-default
-                 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.6)]
-                 opacity-0 translate-y-10"
-      style={{ transitionDelay: `${delay}ms` }}
+                 transition-[transform,box-shadow] duration-350 cursor-default
+                 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
     >
       {/* Default gradient border */}
       <div
