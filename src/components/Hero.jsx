@@ -1,91 +1,37 @@
-import React, { useRef } from "react";
+import React from "react";
 import heroBg from "../assets/images/TWPASS-ALLIANCE.webp";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-  const container = useRef();
-  const boxRef = useRef();
-  const leftLabelRef = useRef();
-  const rightLabelRef = useRef();
-  const bottomLabelRef = useRef();
-
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top top",
-        end: "+=150%",
-        pin: true,
-        scrub: 1,
-      },
-    });
-
-    tl.to(boxRef.current, {
-      scale: 2.5,
-      borderRadius: "0px",
-      duration: 1,
-      ease: "power2.inOut",
-    })
-    .to([leftLabelRef.current, rightLabelRef.current, bottomLabelRef.current], {
-      opacity: 0,
-      y: (i) => (i === 2 ? 50 : -50),
-      duration: 0.5,
-      ease: "power2.inOut",
-    }, 0);
-  }, { scope: container });
-
   return (
     <section
-      ref={container}
-      className="relative w-full h-screen overflow-hidden bg-brand-dark flex items-center justify-center"
+      className="relative w-full h-screen min-h-[500px] sm:min-h-[600px] overflow-hidden flex flex-col"
       id="hero"
     >
-      {/* Background/Base layer */}
-      <div className="absolute inset-0 z-0 bg-brand-dark" />
-
-      {/* Labels */}
-      <div className="absolute inset-0 z-20 pointer-events-none p-8 sm:p-12 lg:p-20 flex flex-col justify-between">
-        <div className="flex justify-between items-start">
-          <div 
-            ref={leftLabelRef}
-            className="max-w-[300px] text-3xl sm:text-4xl lg:text-5xl font-din font-bold text-white leading-tight"
-          >
-            De-identified<br />Mobile Identity
-          </div>
-          <div 
-            ref={rightLabelRef}
-            className="max-w-[300px] text-right text-3xl sm:text-4xl lg:text-5xl font-din font-bold text-white leading-tight"
-          >
-            For an<br />Agentic AI<br />Ready Future
-          </div>
-        </div>
-        
-        <div className="flex justify-start items-end">
-          <div 
-            ref={bottomLabelRef}
-            className="text-lg sm:text-xl font-mulish font-medium text-white/80"
-          >
-            Visit Us MWC26 Barcelona<br />Hall 5 Stand: 5A61
-          </div>
-        </div>
-      </div>
-
-      {/* Central Animated Box */}
-      <div 
-        ref={boxRef}
-        className="relative z-10 w-[60vw] h-[60vh] sm:w-[50vw] sm:h-[50vh] lg:w-[40vw] lg:h-[40vh] rounded-3xl overflow-hidden shadow-2xl"
-      >
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0 after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-b after:from-black/50 after:via-black/20 after:to-transparent after:z-[1]">
         <img
           src={heroBg}
-          alt="TWPASS Alliance"
-          className="w-full h-full object-cover"
+          alt="TWPASS Alliance - Secure Digital Identity"
+          loading="eager"
+          className="w-full h-full object-cover object-center"
         />
-        {/* Cinematic Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent" />
+      </div>
+
+      {/* Bottom Cinematic Fade */}
+      <div
+        className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-b from-transparent via-brand-dark/65 to-brand-dark z-[5] pointer-events-none"
+        aria-hidden="true"
+      />
+
+      {/* Hero Content */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-start text-center mt-40 sm:mt-44 lg:mt-48 px-4">
+        <h1
+          className="hero-glow font-din text-white select-none animate-hero-combined opacity-0
+                     text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-hero
+                     leading-none tracking-wider font-bold"
+        >
+          TWPASS ALLIANCE
+        </h1>
       </div>
     </section>
   );
