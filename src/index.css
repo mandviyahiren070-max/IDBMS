@@ -159,3 +159,125 @@
     transform: scale(1);
   }
 }
+
+/* ─── Premium Gradient Animations ────────────────────────────────────────── */
+
+.animated-mesh-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.animated-mesh-bg::before,
+.animated-mesh-bg::after,
+.animated-mesh-bg .mesh-blob {
+  content: "";
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  pointer-events: none;
+  animation: mesh-move 20s infinite alternate-reverse;
+}
+
+.animated-mesh-bg::before {
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, #f2640e 0%, transparent 70%);
+  animation-duration: 25s;
+}
+
+.animated-mesh-bg::after {
+  bottom: -10%;
+  right: -10%;
+  background: radial-gradient(circle, #0050ff 0%, transparent 70%);
+  animation-duration: 22s;
+  animation-delay: -5s;
+}
+
+.animated-mesh-bg .mesh-blob {
+  top: 40%;
+  left: 30%;
+  background: radial-gradient(circle, #1e3cdc 0%, transparent 70%);
+  animation-duration: 30s;
+  animation-delay: -10s;
+}
+
+@keyframes mesh-move {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(20%, -10%) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-10%, 20%) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.gradient-heading {
+  background: linear-gradient(90deg,
+      #ffffff 0%,
+      #f2640e 40%,
+      #f2640e 60%,
+      #ffffff 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.premium-card-gradient {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      transparent 0%,
+      rgba(242, 100, 14, 0.08) 50%,
+      transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.premium-card-gradient:hover::before {
+  transform: translateX(100%);
+}
+
+.animated-gradient-border {
+  position: relative;
+  background: white/10;
+  overflow: hidden;
+}
+
+.animated-gradient-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f2640e, transparent);
+  animation: border-move 3s linear infinite;
+}
+
+@keyframes border-move {
+  to {
+    left: 100%;
+  }
+}

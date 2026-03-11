@@ -35,11 +35,32 @@ module.exports = {
       animation: {
         'hero-fade-in': 'heroTitleFadeIn 1.2s ease-out 0.3s forwards',
         'glow-pulse': 'glowPulse 4s ease-in-out 1.5s infinite',
-        'hero-combined': 'heroTitleFadeIn 1.2s ease-out 0.3s forwards, glowPulse 4s ease-in-out 1.5s infinite',
+        'hero-combined': 'heroTitleFadeIn 1.2s ease-out 0.3s forwards, glowPulse 4s ease-in-out 1.5s infinite, shimmerText 5s linear infinite',
         'navbar-slide': 'navbarSlideIn 0.8s ease-out 0.1s both',
         'fade-in-up': 'fadeInUp 0.7s ease-out forwards',
+        'shimmer': 'shimmerText 5s linear infinite',
+        'first': 'moveVertical 30s ease infinite',
+        'second': 'moveInCircle 20s reverse infinite',
+        'third': 'moveInCircle 40s linear infinite',
+        'fourth': 'moveHorizontal 40s ease infinite',
+        'fifth': 'moveVertical 20s ease infinite',
       },
       keyframes: {
+        moveHorizontal: {
+          '0%': { transform: 'translateX(-50%) translateY(-10%)' },
+          '50%': { transform: 'translateX(50%) translateY(10%)' },
+          '100%': { transform: 'translateX(-50%) translateY(-10%)' },
+        },
+        moveVertical: {
+          '0%': { transform: 'translateY(-50%)' },
+          '50%': { transform: 'translateY(50%)' },
+          '100%': { transform: 'translateY(-50%)' },
+        },
+        moveInCircle: {
+          '0%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(180deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
         heroTitleFadeIn: {
           '0%': {
             opacity: '0',
@@ -79,6 +100,10 @@ module.exports = {
             opacity: '1',
             transform: 'translateY(0)',
           },
+        },
+        shimmerText: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '200% 50%' },
         },
       },
     },
