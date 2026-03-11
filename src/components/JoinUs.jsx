@@ -38,7 +38,7 @@ const JoinUs = () => {
         <img
           src={joinUsCone}
           alt=""
-          className="absolute right-0 top-1/4 w-[500px] lg:w-[800px] xl:w-[1000px] h-auto object-contain opacity-80"
+          className="absolute right-0 top-1/4 lg:top-[-72%] w-[500px] lg:w-[780px] xl:w-[900px] h-auto object-contain opacity-80"
           aria-hidden="true"
           loading="lazy"
         />
