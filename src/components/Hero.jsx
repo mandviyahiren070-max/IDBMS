@@ -1,6 +1,5 @@
 import React from "react";
 import heroBg from "../assets/images/TWPASS-ALLIANCE.webp";
-import imagee from "../assets/images/image.png";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
 
 const Hero = () => {
@@ -31,15 +30,6 @@ const Hero = () => {
             </h1>
           </div>
 
-          {/* Prominent Image at the bottom */}
-          <div className="relative w-full  flex-1 flex justify-center items-end overflow-hidden">
-            <img
-              src={imagee}
-              alt="TWPASS Security Visualization"
-              loading="eager"
-              className="hero-image-responsive"
-            />
-          </div>
         </div>
       </BackgroundGradientAnimation>
 
