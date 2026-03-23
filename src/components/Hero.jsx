@@ -20,25 +20,24 @@ const Hero = () => {
         containerClassName="absolute inset-0 z-0"
       >
         {/* Main Hero Content & Image Container */}
-        <div className="absolute inset-0 z-30 flex flex-col items-center justify-between pt-44 sm:pt-48 lg:pt-32">
+        <div className="absolute inset-0 z-30 flex flex-col items-center hero-content-padding px-4">
           {/* Title at the top */}
-          <div className="relative z-40 top-[90px] text-center px-4">
+          <div className="relative z-40 text-center">
             <h1
               className="hero-glow font-din select-none animate-hero-combined
-                         text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-hero
-                         leading-none tracking-wider font-bold"
+                         hero-title-responsive leading-none tracking-wider font-bold"
             >
               TWPASS ALLIANCE
             </h1>
           </div>
 
           {/* Prominent Image at the bottom */}
-          <div className="relative w-full max-w-[1400px] mt-auto flex justify-center items-end overflow-hidden">
+          <div className="relative w-full  flex-1 flex justify-center items-end overflow-hidden">
             <img
               src={imagee}
               alt="TWPASS Security Visualization"
               loading="eager"
-              className="w-full h-auto object-contain object-bottom translate-y-[10%] scale-[1.05]"
+              className="hero-image-responsive"
             />
           </div>
         </div>
